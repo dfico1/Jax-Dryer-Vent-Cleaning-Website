@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  ============================================================================
+  JAX DRYER VENT CLEANERS — SERVICES & PRICING PAGE
+  File: services.html
+
+  PAGE SECTIONS (in order):
+  1.  <head>          SEO meta tags
+  2.  Nav             Injected by components.js
+  3.  Page hero       Teal header
+  4.  Residential     3 pricing cards (Standard, Extended, Annual plan)
+  5.  Add-ons         Table of optional add-on services
+  6.  Commercial      3 pricing cards (Per-unit, Laundromat, HOA audit)
+  7.  Why specialist  3-card differentiator section
+  8.  CTA band        Dark bottom section with phone number
+  9.  Footer          Injected by components.js
+
+  QUICK CHANGE GUIDE:
+  ─────────────────────────────────────────────────────────────
+  Change a price      → find the .price div inside the pricing card and edit
+  Add a service       → copy a .pricing-card div and update all text
+  Add an add-on       → copy a .pricing-item row in the add-ons table
+  Change card color   → edit background on the .pricing-card-header div
+  ─────────────────────────────────────────────────────────────
+  ============================================================================
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO: Page title — includes pricing keyword -->
+  <title>Dryer Vent Cleaning Services &amp; Pricing | Jax Dryer Vent Cleaners Jacksonville FL</title>
+
+  <!-- SEO: Meta description -->
+  <meta name="description" content="Transparent flat-rate pricing for dryer vent cleaning in Jacksonville FL. Residential from $149, commercial from $75/unit. Same-day available. Call 904-555-1234.">
+
+  <!-- SEO: Canonical URL — update to your real domain before launch -->
+  <link rel="canonical" href="https://www.jaxdryerventcleaners.com/services.html">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 1 — NAVIGATION (injected by components.js)
+       ════════════════════════════════════════════════════════════════════ -->
+  <div id="nav-placeholder"></div>
+
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 2 — PAGE HERO
+       ════════════════════════════════════════════════════════════════════ -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-label section-label-light">Services &amp; pricing</div>
+      <h1>Flat-rate pricing. No surprises.</h1>
+      <p>We publish our prices because we're confident in our value. Every job includes a before-and-after airflow report — proof the work was done right.</p>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 3 — RESIDENTIAL PRICING CARDS
+       Three cards: Standard ($149), Extended ($179), Annual Plan ($249/yr)
+
+       TO CHANGE A PRICE:
+       Edit the text inside the <div class="price"> in each card header.
+
+       TO CHANGE CARD HEADER COLOR:
+       Add inline style="background: #0D3D30;" to the .pricing-card-header div.
+       (The Annual Plan card already uses dark teal as an example.)
+
+       TO ADD A CARD:
+       Copy an entire .pricing-card div and update the content.
+
+       TO ADD/REMOVE A FEATURE ROW:
+       Copy or delete a .pricing-item div inside .pricing-card-body.
+       ════════════════════════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label">Residential</div>
+        <h2>Single-family homes &amp; townhomes.</h2>
+        <p>Most Jacksonville residential jobs are completed in 45–75 minutes. We work around your schedule with 2-hour arrival windows.</p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <!-- ── Card 1: Standard cleaning ── -->
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <!-- Card title -->
+            <h3>Standard cleaning</h3>
+            <!-- Price — edit this to change the displayed price -->
+            <div class="price">$149</div>
+            <!-- Small note below price -->
+            <div class="price-note">Vent runs up to 25 ft</div>
+          </div>
+          <div class="pricing-card-body">
+            <!-- Feature rows — copy/delete these to add/remove items -->
+            <div class="pricing-item">
+              <span class="pricing-item-name">Full rotary brush clean</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-item-name">Before &amp; after airflow test</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-item-name">Written condition report</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-item-name">Exterior termination check</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-item-name">Digital invoice</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Card 2: Extended run ── -->
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3>Extended run</h3>
+            <div class="price">$179</div>
+            <div class="price-note">Vent runs 25–50 ft</div>
+          </div>
+          <div class="pricing-card-body">
+            <div class="pricing-item">
+              <span class="pricing-item-name">Everything in standard</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-item-name">Extended brush reach (50 ft)</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-item-name">Common in newer Jax homes</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-item-name">Slab-construction optimized</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Card 3: Annual maintenance plan ── -->
+        <!-- NOTE: This card uses dark teal header instead of standard teal -->
+        <div class="pricing-card">
+          <div class="pricing-card-header" style="background: #0D3D30;">
+            <!-- Dark teal header differentiates this as the "best value" option -->
+            <h3>Annual plan</h3>
+            <div class="price">$249/yr</div>
+            <div class="price-note">Two cleanings — best value</div>
+          </div>
+          <div class="pricing-card-body">
+            <div class="pricing-item">
+              <span class="pricing-item-name">2 cleanings per year</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-item-name">Automatic annual reminders</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-item-name">Priority scheduling</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-item-name">Recommended for humid climates</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+            <div class="pricing-item">
+              <!-- Shows the dollar savings vs. two single visits -->
+              <span class="pricing-item-name">Save vs. two single visits</span>
+              <span class="pricing-item-price">$49</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end .pricing-grid residential -->
+
+
+      <!-- ════════════════════════════════════════════════════════════════
+           ADD-ON SERVICES TABLE
+           Optional extras that can be added to any job.
+           Displayed as a simple list below the main pricing cards.
+
+           TO ADD AN ADD-ON: copy a .pricing-item row and update
+           TO REMOVE AN ADD-ON: delete a .pricing-item row
+           TO CHANGE A PRICE: edit the right-side span text
+           ════════════════════════════════════════════════════════════════ -->
+      <div style="margin-top: 48px;">
+        <div class="section-label">Add-ons</div>
+        <h2 style="font-family:'Barlow Condensed',sans-serif; font-size:32px; font-weight:900; margin-bottom:20px;">
+          Optional upgrades for any visit.
+        </h2>
+
+        <!-- Add-on table — max-width 600px keeps it from stretching too wide -->
+        <div style="background:var(--gray); border-radius:10px; overflow:hidden; max-width:600px;">
+
+          <!-- Add-on row 1 -->
+          <div class="pricing-item" style="padding:14px 20px; border-bottom:0.5px solid #ddd;">
+            <span class="pricing-item-name">Rooftop termination cleaning</span>
+            <span class="pricing-item-price">+$65</span>
+          </div>
+
+          <!-- Add-on row 2 -->
+          <div class="pricing-item" style="padding:14px 20px; border-bottom:0.5px solid #ddd;">
+            <span class="pricing-item-name">Video inspection report</span>
+            <span class="pricing-item-price">+$35</span>
+          </div>
+
+          <!-- Add-on row 3 — booster fan (uses electrical engineering background) -->
+          <div class="pricing-item" style="padding:14px 20px; border-bottom:0.5px solid #ddd;">
+            <span class="pricing-item-name">Booster fan diagnostic &amp; electrical testing</span>
+            <span class="pricing-item-price">+$75–125</span>
+          </div>
+
+          <!-- Add-on row 4 -->
+          <div class="pricing-item" style="padding:14px 20px; border-bottom:0.5px solid #ddd;">
+            <span class="pricing-item-name">Pressure switch replacement</span>
+            <span class="pricing-item-price">+$125–200</span>
+          </div>
+
+          <!-- Add-on row 5 -->
+          <div class="pricing-item" style="padding:14px 20px;">
+            <span class="pricing-item-name">Simple vent reroute or repair</span>
+            <span class="pricing-item-price">$200–400</span>
+          </div>
+
+        </div><!-- end add-ons table -->
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 4 — COMMERCIAL PRICING
+       Separate section for commercial/multi-family pricing.
+       Gray background to visually separate from residential section.
+
+       TO CHANGE commercial prices: edit .price divs in each card
+       ════════════════════════════════════════════════════════════════════ -->
+  <section class="section section-gray">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label">Commercial</div>
+        <h2>Property managers, HOAs &amp; business owners.</h2>
+        <p>We work with property managers, HOA boards, laundromats, and commercial facilities. Volume pricing and recurring service contracts available.</p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <!-- Commercial Card 1: Per-unit cleaning -->
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3>Per-unit cleaning</h3>
+            <div class="price">$75–125</div>
+            <div class="price-note">Per dryer unit</div>
+          </div>
+          <div class="pricing-card-body">
+            <div class="pricing-item">
+              <span class="pricing-item-name">Apartments &amp; condos</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-item-name">Volume discounts available</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-item-name">Itemized report per unit</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-item-name">Recurring contract pricing</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Commercial Card 2: Laundromat -->
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3>Laundromat service</h3>
+            <div class="price">Custom</div>
+            <div class="price-note">Per machine / per visit</div>
+          </div>
+          <div class="pricing-card-body">
+            <div class="pricing-item">
+              <span class="pricing-item-name">Commercial dryer vents</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-item-name">Scheduled recurring visits</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-item-name">Compliance documentation</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-item-name">Off-hours scheduling available</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Commercial Card 3: HOA building audit -->
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3>HOA building audit</h3>
+            <div class="price">$300–600</div>
+            <div class="price-note">Per building</div>
+          </div>
+          <div class="pricing-card-body">
+            <div class="pricing-item">
+              <span class="pricing-item-name">10–20 units per visit</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-item-name">Booster fan assessment</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-item-name">Full building condition report</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+            <div class="pricing-item">
+              <span class="pricing-item-name">Annual contract available</span>
+              <span class="pricing-item-price">✓</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end commercial .pricing-grid -->
+
+      <!-- Commercial quote callout box -->
+      <div style="margin-top:28px; background:var(--teal-light); border-radius:8px; padding:20px 24px;">
+        <strong style="color:#085041;">Need a commercial quote?</strong>
+        <span style="color:#0F6E56; margin-left:8px; font-size:15px;">
+          Call us at
+          <a href="tel:9045551234" style="color:var(--teal); font-weight:600;">904-555-1234</a>
+          or
+          <a href="contact.html" style="color:var(--teal); font-weight:600;">send a message</a>
+          — we'll put together a custom proposal within 24 hours.
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 5 — WHY A SPECIALIST
+       3-card section explaining the differentiators vs. generalist competitors.
+       Addresses objections before the customer asks.
+       ════════════════════════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label">Why us</div>
+        <h2>What makes a specialist different?</h2>
+      </div>
+
+      <div class="service-grid">
+
+        <!-- Differentiator 1: Measurement -->
+        <div class="service-card">
+          <h3>We measure everything</h3>
+          <p>Every job includes a CFM airflow reading before and after. You get proof the job was done — not just our word for it. Most competitors skip this entirely.</p>
+        </div>
+
+        <!-- Differentiator 2: Engineering background -->
+        <div class="service-card">
+          <h3>Engineering background</h3>
+          <p>Our technician has an electrical engineering background and can diagnose and fix booster fans, pressure switches, and wiring issues that other cleaners simply ignore.</p>
+        </div>
+
+        <!-- Differentiator 3: Specialization -->
+        <div class="service-card">
+          <h3>Dryer vents only</h3>
+          <p>We don't clean ducts, gutters, or chimneys. This is all we do — which means better equipment, deeper expertise, and faster service than any generalist.</p>
+        </div>
+
+      </div><!-- end .service-grid -->
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 6 — CTA BAND
+       ════════════════════════════════════════════════════════════════════ -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="section-label section-label-light">Get started</div>
+      <h2>Ready to book your cleaning?</h2>
+      <p>Same-day service often available. Call or book online in under 2 minutes.</p>
+      <a href="tel:9045551234" class="cta-phone">904-555-1234</a>
+      <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+        <a href="tel:9045551234" class="btn btn-gold">Call now</a>
+        <a href="contact.html"   class="btn btn-outline">Book online</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 7 — FOOTER (injected by components.js)
+       ════════════════════════════════════════════════════════════════════ -->
+  <div id="footer-placeholder"></div>
+  <script src="components.js"></script>
+
+</body>
+</html>

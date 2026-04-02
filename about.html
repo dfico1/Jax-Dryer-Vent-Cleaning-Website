@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  ============================================================================
+  JAX DRYER VENT CLEANERS — ABOUT PAGE
+  File: about.html
+
+  PURPOSE:
+  The About page builds personal trust. In home services, customers invite you
+  into their home — they want to know who is coming. This page answers that.
+  It also establishes credibility with the family industry background,
+  engineering credentials, and the CT business proof of concept.
+
+  PAGE SECTIONS (in order):
+  1.  <head>            SEO meta tags
+  2.  Nav               Injected by components.js
+  3.  Page hero         Teal header
+  4.  Our story         Two-column: founder story (left) + credential cards (right)
+  5.  Our values        3-card section: measure, on time, honest
+  6.  Referral partners 3-card section: HVAC, appliance repair, real estate
+  7.  CTA band          Dark section with phone number
+  8.  Footer            Injected by components.js
+
+  QUICK CHANGE GUIDE:
+  ─────────────────────────────────────────────────────────────
+  Update the founder story     → edit <p> tags in the OUR STORY left column
+  Update your name             → search "Dan" and replace throughout
+  Add a credential card        → copy a .service-card in the right column
+  Add a referral partner type  → copy a .service-card in REFERRAL PARTNERS
+  ─────────────────────────────────────────────────────────────
+  ============================================================================
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO: Title — includes location + specialty -->
+  <title>About Us | Jax Dryer Vent Cleaners Jacksonville FL</title>
+
+  <!-- SEO: Description — emphasizes credentials and experience -->
+  <meta name="description" content="Meet Dan, owner of Jax Dryer Vent Cleaners. Jacksonville's dedicated dryer vent specialist with 10+ years industry experience and an electrical engineering background.">
+
+  <!-- SEO: Canonical URL — update to your real domain before launch -->
+  <link rel="canonical" href="https://www.jaxdryerventcleaners.com/about.html">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 1 — NAVIGATION (injected by components.js)
+       ════════════════════════════════════════════════════════════════════ -->
+  <div id="nav-placeholder"></div>
+
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 2 — PAGE HERO
+       ════════════════════════════════════════════════════════════════════ -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-label section-label-light">About us</div>
+      <h1>Jacksonville's dedicated dryer vent specialist.</h1>
+      <p>Not a franchise. Not a side service. One specialist who knows dryer vents better than anyone in northeast Florida.</p>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 3 — OUR STORY
+       Two-column layout:
+       LEFT  → Personal founder story in paragraphs
+       RIGHT → Credential/strength cards
+
+       TO UPDATE THE STORY: edit the <p> tags in the left column
+       TO ADD A CREDENTIAL: copy a .service-card div in the right column
+       ════════════════════════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;">
+
+        <!-- ── LEFT COLUMN: Founder story ── -->
+        <div>
+          <div class="section-label">Our story</div>
+          <h2 style="font-family:'Barlow Condensed',sans-serif; font-size:36px; font-weight:900; line-height:1.15; margin-bottom:20px;">
+            Built on 10 years of family industry experience.
+          </h2>
+
+          <!-- Paragraph 1: Background — edit with your actual story -->
+          <p style="font-size:15px; color:var(--text-muted); line-height:1.8; margin-bottom:16px;">
+            I grew up working in my family's duct cleaning business in Connecticut —
+            loading equipment, running jobs, learning every corner of the trade from
+            my father, who has spent 25+ years in the industry. By the time I moved
+            to Jacksonville, I had a decade of hands-on experience and an electrical
+            engineering degree to go with it.
+          </p>
+
+          <!-- Paragraph 2: Market opportunity — why Jacksonville specifically -->
+          <p style="font-size:15px; color:var(--text-muted); line-height:1.8; margin-bottom:16px;">
+            When I looked at the Jacksonville market, I saw something clear: plenty
+            of HVAC companies and handymen who clean dryer vents as a side job, and
+            nobody who actually specializes in it. No one offering before-and-after
+            airflow measurements. No one who could also diagnose a booster fan or
+            fix a pressure switch. Just a race to the bottom on price.
+          </p>
+
+          <!-- Paragraph 3: Mission -->
+          <p style="font-size:15px; color:var(--text-muted); line-height:1.8; margin-bottom:16px;">
+            Jax Dryer Vent Cleaners exists to be different — a specialist who shows
+            up on time, does measurable work, and stands behind every job with
+            documentation. Jacksonville deserves that.
+          </p>
+
+          <!-- Founder sign-off — update "Dan" with your actual name -->
+          <p style="font-size:15px; color:var(--text-muted); line-height:1.8;">
+            &mdash; Dan, Owner &amp; Lead Technician
+          </p>
+        </div>
+
+        <!-- ── RIGHT COLUMN: Credential cards ── -->
+        <!-- TO ADD A CREDENTIAL: copy a .service-card div below -->
+        <div style="display:flex; flex-direction:column; gap:16px;">
+
+          <!-- Credential 1: Industry experience -->
+          <div class="service-card">
+            <h3>10+ years industry experience</h3>
+            <p>Trained in the family business from the ground up. No guessing, no learning curve — I've done this work for over a decade alongside my father and brother-in-law.</p>
+          </div>
+
+          <!-- Credential 2: Engineering background -->
+          <div class="service-card">
+            <h3>Electrical engineering background</h3>
+            <p>Can diagnose and repair booster fans, pressure switches, and wiring problems that send other cleaners running. A meaningful differentiator for condo buildings and longer vent runs.</p>
+          </div>
+
+          <!-- Credential 3: Proven business model -->
+          <div class="service-card">
+            <h3>Family-proven business model</h3>
+            <p>My brother-in-law runs the same specialized dryer vent cleaning business in Connecticut — successfully, for years. I'm not experimenting. I'm applying a proven playbook to an underserved market.</p>
+          </div>
+
+          <!-- Credential 4: Insurance / professionalism -->
+          <div class="service-card">
+            <h3>Licensed, insured, and accountable</h3>
+            <p>General liability and commercial auto coverage on every job. You know who is coming to your home, and you're protected if anything goes wrong.</p>
+          </div>
+
+        </div><!-- end right column -->
+
+      </div><!-- end two-column grid -->
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 4 — OUR VALUES
+       3 non-negotiable standards. Addresses the #1 home service complaints:
+       - Didn't show up on time
+       - Can't prove the work was done
+       - Felt pressured to spend more
+
+       TO ADD A VALUE: copy a .service-card div
+       TO REMOVE A VALUE: delete a .service-card div
+       ════════════════════════════════════════════════════════════════════ -->
+  <section class="section section-gray">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label">How we work</div>
+        <h2>Three things we never compromise on.</h2>
+      </div>
+
+      <div class="service-grid">
+
+        <!-- Value 1: Measurement -->
+        <div class="service-card">
+          <h3>We measure everything</h3>
+          <p>Every job includes a CFM airflow reading before we start and after we finish. The difference in those numbers is proof of the work we did. No other Jacksonville competitor does this consistently.</p>
+        </div>
+
+        <!-- Value 2: Punctuality -->
+        <div class="service-card">
+          <h3>We show up when we say we will</h3>
+          <p>Two-hour arrival windows, text confirmation when we're on the way, and a marked van so you know exactly who is at your door. Reliability is the most basic promise a service company can make — and the most commonly broken one.</p>
+        </div>
+
+        <!-- Value 3: Honesty -->
+        <div class="service-card">
+          <h3>We tell you what we find, honestly</h3>
+          <p>If your vent is fine and doesn't need extra work, we'll tell you that too. If there's a problem, we explain it clearly, show you the evidence, and give you options — no pressure, no upsell theater.</p>
+        </div>
+
+      </div><!-- end .service-grid -->
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 5 — REFERRAL PARTNERS
+       Explains the cross-referral strategy.
+       Based on Steve's advice: HVAC companies, appliance repair, real estate agents.
+
+       TO ADD A PARTNER TYPE: copy a .service-card div
+       TO REMOVE A PARTNER TYPE: delete a .service-card div
+       ════════════════════════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label">Referral partners</div>
+        <h2>We work well with others.</h2>
+        <p>We actively partner with complementary businesses throughout Jacksonville. If you refer us work, we'll refer your business right back.</p>
+      </div>
+
+      <div class="service-grid">
+
+        <!-- Partner type 1: HVAC / duct cleaners -->
+        <div class="service-card">
+          <h3>HVAC &amp; duct cleaning companies</h3>
+          <p>Don't want to deal with dryer vents? Send them our way. We'll return the favor when customers ask us about full duct cleaning — which is outside our scope by design.</p>
+        </div>
+
+        <!-- Partner type 2: Appliance repair -->
+        <div class="service-card">
+          <h3>Appliance repair technicians</h3>
+          <p>If you're diagnosing a slow or overheating dryer and suspect a vent issue, call us. We can often be there the same day and confirm whether the vent is the culprit.</p>
+        </div>
+
+        <!-- Partner type 3: Real estate / home inspectors -->
+        <div class="service-card">
+          <h3>Real estate agents &amp; home inspectors</h3>
+          <p>Dryer vent condition comes up at inspection. We can provide a written airflow report that satisfies buyers and sellers. Fast scheduling available for real estate transactions.</p>
+        </div>
+
+      </div><!-- end .service-grid -->
+
+      <!-- CTA to contact page for partnership inquiries -->
+      <div style="margin-top:24px;">
+        <a href="contact.html" class="btn btn-teal">Get in touch about a partnership</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 6 — CTA BAND
+       ════════════════════════════════════════════════════════════════════ -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="section-label section-label-light">Book a visit</div>
+      <h2>Ready to work with Jacksonville's dryer vent specialist?</h2>
+      <p>Same-day service available. Flat-rate pricing. Licensed &amp; insured.</p>
+      <a href="tel:9045551234" class="cta-phone">904-555-1234</a>
+      <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+        <a href="tel:9045551234" class="btn btn-gold">Call now</a>
+        <a href="contact.html"   class="btn btn-outline">Book online</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 7 — FOOTER (injected by components.js)
+       ════════════════════════════════════════════════════════════════════ -->
+  <div id="footer-placeholder"></div>
+  <script src="components.js"></script>
+
+</body>
+</html>

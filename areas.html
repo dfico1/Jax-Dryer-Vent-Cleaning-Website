@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  ============================================================================
+  JAX DRYER VENT CLEANERS — SERVICE AREAS PAGE
+  File: areas.html
+
+  WHY THIS PAGE MATTERS FOR SEO:
+  This is one of the most important pages for local search ranking.
+  Every neighborhood mentioned here (by name) helps you rank when someone
+  searches "dryer vent cleaning [neighborhood name]".
+  The more specific and detailed this page is, the better.
+
+  PAGE SECTIONS (in order):
+  1.  <head>          SEO meta tags (neighbor-rich description)
+  2.  Nav             Injected by components.js
+  3.  Page hero       Teal header
+  4.  Primary areas   6 detailed cards for core service zones
+  5.  Extended areas  Pill grid for secondary neighborhoods
+  6.  Why Jax needs   3-card section: humidity, long runs, rooftops
+  7.  CTA band        Dark section with phone number
+  8.  Footer          Injected by components.js
+
+  QUICK CHANGE GUIDE:
+  ─────────────────────────────────────────────────────────────
+  Add a primary area    → copy a .service-card div in PRIMARY AREAS section
+  Add an extended area  → copy an .area-pill div in EXTENDED AREAS section
+  Remove an area        → delete the corresponding card or pill
+  Update area copy      → edit the <p> text inside each .service-card
+  ─────────────────────────────────────────────────────────────
+  ============================================================================
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO: Title — includes multiple location keywords -->
+  <title>Dryer Vent Cleaning Service Areas | Jacksonville, Ponte Vedra, St. Augustine FL</title>
+
+  <!-- SEO: Description — pack in as many area names as naturally fit -->
+  <meta name="description" content="Jax Dryer Vent Cleaners serves Jacksonville, Ponte Vedra, Jacksonville Beach, St. Augustine, St. Johns, Mandarin, Nocatee, Fernandina Beach and surrounding areas.">
+
+  <!-- SEO: Canonical URL — update to your real domain before launch -->
+  <link rel="canonical" href="https://www.jaxdryerventcleaners.com/areas.html">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 1 — NAVIGATION (injected by components.js)
+       ════════════════════════════════════════════════════════════════════ -->
+  <div id="nav-placeholder"></div>
+
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 2 — PAGE HERO
+       ════════════════════════════════════════════════════════════════════ -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-label section-label-light">Service areas</div>
+      <h1>Dryer vent cleaning across greater Jacksonville &amp; beyond.</h1>
+      <p>We serve the entire northeast Florida region — from Fernandina Beach to St. Augustine, and from the beaches to the St. Johns River corridor.</p>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 3 — PRIMARY SERVICE ZONES
+       Detailed cards for the 6 core neighborhoods.
+       Each card has a neighborhood name as H3 (good for SEO),
+       descriptive local copy, and a "from $149" price signal.
+
+       SEO NOTE: The H3 text and the paragraph copy for each card
+       should mention the neighborhood name naturally — this is how
+       Google understands which searches to show this page for.
+
+       TO ADD A PRIMARY AREA CARD:
+       Copy one of the .service-card divs below, update the h3 and p text,
+       and update the .service-price div.
+       ════════════════════════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label">Primary service zones</div>
+        <h2>Our core service area — same-day available.</h2>
+        <p>These neighborhoods are our home turf. We run tight routes here so we can offer same-day and next-morning appointments reliably.</p>
+      </div>
+
+      <div class="service-grid">
+
+        <!-- Primary Area 1: Ponte Vedra -->
+        <div class="service-card">
+          <h3>Ponte Vedra &amp; Ponte Vedra Beach</h3>
+          <p>High-income community with newer construction, longer vent runs, and frequent rooftop terminations. One of our busiest service zones. We know these neighborhoods well.</p>
+          <div class="service-price">Dryer vent cleaning Ponte Vedra from $149</div>
+        </div>
+
+        <!-- Primary Area 2: Beach communities -->
+        <div class="service-card">
+          <h3>Jacksonville Beach, Neptune Beach &amp; Atlantic Beach</h3>
+          <p>Dense coastal communities with high homeownership. Saltwater humidity accelerates lint compaction — most beach homes benefit from twice-yearly cleaning.</p>
+          <div class="service-price">Dryer vent cleaning Jacksonville Beach from $149</div>
+        </div>
+
+        <!-- Primary Area 3: Southside -->
+        <div class="service-card">
+          <h3>Southside &amp; Tinseltown</h3>
+          <p>Large suburban area with many townhome and condo complexes. We work closely with property managers throughout the Southside corridor.</p>
+          <div class="service-price">Dryer vent cleaning Southside Jacksonville from $149</div>
+        </div>
+
+        <!-- Primary Area 4: Mandarin -->
+        <div class="service-card">
+          <h3>Mandarin</h3>
+          <p>Established family neighborhoods with a mix of older and newer construction. Long vent runs common in this area — we have the reach to handle them properly.</p>
+          <div class="service-price">Dryer vent cleaning Mandarin from $149</div>
+        </div>
+
+        <!-- Primary Area 5: Nocatee / St. Johns -->
+        <div class="service-card">
+          <h3>Nocatee &amp; St. Johns County</h3>
+          <p>One of the fastest-growing communities in the US. New construction means longer vent runs and rooftop terminations that need professional attention from day one.</p>
+          <div class="service-price">Dryer vent cleaning Nocatee from $149</div>
+        </div>
+
+        <!-- Primary Area 6: St. Augustine -->
+        <div class="service-card">
+          <h3>St. Augustine &amp; St. Johns</h3>
+          <p>We regularly serve St. Augustine, St. Augustine Beach, and surrounding St. Johns County communities. Same great service, same flat-rate pricing.</p>
+          <div class="service-price">Dryer vent cleaning St. Augustine from $149</div>
+        </div>
+
+      </div><!-- end primary .service-grid -->
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 4 — EXTENDED COVERAGE AREAS
+       Secondary neighborhoods covered, shown as pills.
+       Less detailed than the primary cards but still gets indexed by Google.
+
+       TO ADD AN AREA: copy an .area-pill div and update the neighborhood name
+       TO REMOVE AN AREA: delete an .area-pill div
+       ════════════════════════════════════════════════════════════════════ -->
+  <section class="section section-gray">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label">Extended coverage</div>
+        <h2>We also serve these communities.</h2>
+        <p>Call ahead to confirm availability and scheduling in extended areas. Travel fees may apply for the furthest destinations.</p>
+      </div>
+
+      <!-- Extended area pills — each neighborhood name helps local SEO -->
+      <div class="areas-grid">
+        <div class="area-pill">Fernandina Beach</div>
+        <div class="area-pill">Amelia Island</div>
+        <div class="area-pill">Orange Park</div>
+        <div class="area-pill">Fleming Island</div>
+        <div class="area-pill">Middleburg</div>
+        <div class="area-pill">Green Cove Springs</div>
+        <div class="area-pill">Palatka</div>
+        <div class="area-pill">Yulee</div>
+        <div class="area-pill">Callahan</div>
+        <div class="area-pill">Baldwin</div>
+        <div class="area-pill">Macclenny</div>
+        <div class="area-pill">Palm Valley</div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 5 — WHY JACKSONVILLE SPECIFICALLY
+       3-card section explaining local climate and construction factors.
+       This content differentiates the site from generic national competitors
+       and signals local expertise to both users and Google.
+
+       TO ADD: copy a .service-card div
+       TO REMOVE: delete a .service-card div
+       ════════════════════════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label">Jacksonville-specific knowledge</div>
+        <h2>Why Jacksonville homes need extra attention.</h2>
+      </div>
+
+      <div class="service-grid">
+
+        <!-- Local factor 1: Humidity -->
+        <div class="service-card">
+          <h3>High humidity accelerates lint buildup</h3>
+          <p>Jacksonville's year-round humidity causes lint to compact more densely than in dry climates. What needs annual cleaning in Connecticut may need twice-yearly service here in Florida.</p>
+        </div>
+
+        <!-- Local factor 2: Newer construction -->
+        <div class="service-card">
+          <h3>Newer construction = longer vent runs</h3>
+          <p>Jacksonville's new developments (Nocatee, Ponte Vedra, St. Johns) feature slab-on-grade construction with longer vent runs — often 25–50 ft — that require extended brush reach.</p>
+        </div>
+
+        <!-- Local factor 3: Rooftop vents -->
+        <div class="service-card">
+          <h3>Rooftop terminations are common here</h3>
+          <p>Many Jacksonville homes vent through the roof rather than through a wall. These terminations require safe ladder access and specific cleaning techniques that most companies skip.</p>
+        </div>
+
+      </div><!-- end .service-grid -->
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 6 — CTA BAND
+       ════════════════════════════════════════════════════════════════════ -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="section-label section-label-light">Your area</div>
+      <h2>Not sure if we cover your neighborhood?</h2>
+      <p>Call us — we probably do. If we can't make it work, we'll tell you honestly.</p>
+      <a href="tel:9045551234" class="cta-phone">904-555-1234</a>
+      <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+        <a href="tel:9045551234" class="btn btn-gold">Call now</a>
+        <a href="contact.html"   class="btn btn-outline">Send a message</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SECTION 7 — FOOTER (injected by components.js)
+       ════════════════════════════════════════════════════════════════════ -->
+  <div id="footer-placeholder"></div>
+  <script src="components.js"></script>
+
+</body>
+</html>
