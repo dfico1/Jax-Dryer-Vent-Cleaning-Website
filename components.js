@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
      Usage: activeIf('services.html') → returns 'style="color:white"' if current
      ────────────────────────────────────────────────────────────────────── */
   function activeIf(page) {
-    return currentPage === page ? 'style="color:white; border-bottom: 2px solid #00A693; padding-bottom: 2px;"' : '';
+    return currentPage === page ? 'style="color:white; border-bottom: 2px solid #1A6BB5; padding-bottom: 2px;"' : '';
   }
 
 
@@ -74,15 +74,40 @@ document.addEventListener('DOMContentLoaded', function () {
      ─────────────────────────────────────────────────────────────────────────
      ======================================================================== */
   const navHTML = `
+
+    <!-- ── UTILITY BAR (above main nav) ── -->
+    <!-- Shows email, service area, and phone at a glance -->
+    <!-- TO CHANGE: update email address, service area text, and phone number below -->
+    <div style="background:#0A1C47; padding:7px 0; font-size:13px;">
+      <div style="max-width:1100px; margin:0 auto; padding:0 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px;">
+        <div style="display:flex; gap:20px; align-items:center;">
+          <!-- Email address -->
+          <a href="mailto:dan@jaxdvc.com" style="color:#A8C4E8; text-decoration:none;">
+            &#9993;&nbsp; dan@jaxdvc.com
+          </a>
+          <!-- Service area -->
+          <span style="color:#A8C4E8;">
+            &#128205;&nbsp; Serving Jacksonville &amp; Northeast Florida
+          </span>
+        </div>
+        <!-- Phone number — most important action -->
+        <a href="tel:9045551234" style="color:#C8581A; font-weight:700; text-decoration:none;">
+          Call Now: 904-555-1234
+        </a>
+      </div>
+    </div>
+
     <nav>
       <div class="nav-inner">
 
-        <!-- ── LOGO (left side of nav) ── -->
+        <!-- ── LOGO (left side of nav) — uses transparent PNG ── -->
+        <!-- TO CHANGE: swap Logo_v2_transparent_background.png for a new file -->
         <a href="index.html" class="nav-logo">
-          <div class="nav-logo-text">
-            <span class="nav-logo-name">JAX DRYER VENT CLEANERS</span>
-            <span class="nav-logo-sub">COMMERCIAL &amp; RESIDENTIAL</span>
-          </div>
+          <img
+            src="Logo_v2_transparent_background.png"
+            alt="Jax Dryer Vent Cleaners logo"
+            style="height:64px; width:auto; display:block;"
+          />
         </a>
 
         <!-- ── DESKTOP NAV LINKS (hidden on mobile) ── -->
@@ -92,6 +117,8 @@ document.addEventListener('DOMContentLoaded', function () {
           <li><a href="index.html"    ${activeIf('index.html')}>Home</a></li>
           <li><a href="services.html" ${activeIf('services.html')}>Services &amp; Pricing</a></li>
           <li><a href="areas.html"    ${activeIf('areas.html')}>Service Areas</a></li>
+          <li><a href="gallery.html"  ${activeIf('gallery.html')}>Gallery</a></li>
+          <li><a href="blog.html"     ${activeIf('blog.html')}>Blog</a></li>
           <li><a href="about.html"    ${activeIf('about.html')}>About</a></li>
           <li><a href="contact.html"  ${activeIf('contact.html')}>Contact</a></li>
 
@@ -120,18 +147,20 @@ document.addEventListener('DOMContentLoaded', function () {
     <!-- ── MOBILE DROPDOWN MENU ── -->
     <!-- Hidden by default — shown when hamburger is clicked -->
     <!-- Stacked vertically for easy thumb tapping on phones -->
-    <div id="mobile-nav" style="display:none; background:#0D3D30; padding:16px 24px; border-top: 1px solid #085041;">
+    <div id="mobile-nav" style="display:none; background:#0D2358; padding:16px 24px; border-top: 1px solid #0A1C47;">
       <ul style="list-style:none; display:flex; flex-direction:column; gap:16px;">
-        <li><a href="index.html"    style="color:#9FDFCB; font-size:15px; font-weight:600;">Home</a></li>
-        <li><a href="services.html" style="color:#9FDFCB; font-size:15px; font-weight:600;">Services &amp; Pricing</a></li>
-        <li><a href="areas.html"    style="color:#9FDFCB; font-size:15px; font-weight:600;">Service Areas</a></li>
-        <li><a href="about.html"    style="color:#9FDFCB; font-size:15px; font-weight:600;">About</a></li>
-        <li><a href="contact.html"  style="color:#9FDFCB; font-size:15px; font-weight:600;">Contact</a></li>
-        <!-- Phone shown large in gold on mobile nav — most important action -->
-        <li><a href="tel:9045551234" style="color:#D4AF37; font-size:20px; font-weight:700;">904-555-1234</a></li>
+        <li><a href="index.html"    style="color:#A8C4E8; font-size:15px; font-weight:600;">Home</a></li>
+        <li><a href="services.html" style="color:#A8C4E8; font-size:15px; font-weight:600;">Services &amp; Pricing</a></li>
+        <li><a href="areas.html"    style="color:#A8C4E8; font-size:15px; font-weight:600;">Service Areas</a></li>
+        <li><a href="gallery.html"  style="color:#A8C4E8; font-size:15px; font-weight:600;">Gallery</a></li>
+        <li><a href="blog.html"     style="color:#A8C4E8; font-size:15px; font-weight:600;">Blog</a></li>
+        <li><a href="about.html"    style="color:#A8C4E8; font-size:15px; font-weight:600;">About</a></li>
+        <li><a href="contact.html"  style="color:#A8C4E8; font-size:15px; font-weight:600;">Contact</a></li>
+        <!-- Phone shown large in orange on mobile nav — most important action -->
+        <li><a href="tel:9045551234" style="color:#C8581A; font-size:20px; font-weight:700;">904-555-1234</a></li>
         <!-- Book now button in mobile menu -->
         <li>
-          <a href="contact.html" style="display:inline-block; background:#D4AF37; color:#412402; padding:10px 20px; border-radius:6px; font-weight:700; font-size:14px;">
+          <a href="contact.html" style="display:inline-block; background:#C8581A; color:#ffffff; padding:10px 20px; border-radius:6px; font-weight:700; font-size:14px;">
             Book now
           </a>
         </li>
@@ -163,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="footer-name">JAX DRYER VENT CLEANERS</div>
 
         <!-- Tagline / positioning statement -->
-        <div style="font-size:12px; color:#9FDFCB; margin-bottom:8px;">
+        <div style="font-size:12px; color:#A8C4E8; margin-bottom:8px;">
           Jacksonville's dedicated dryer vent specialist &middot; Commercial &amp; Residential
         </div>
 
@@ -178,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         <!-- Phone number in gold — clickable to call -->
         <!-- TO CHANGE: update display text AND tel: number (no dashes) -->
-        <a href="tel:9045551234" style="color:#D4AF37; font-size:16px; font-weight:700; display:block; margin: 8px 0;">
+        <a href="tel:9045551234" style="color:#C8581A; font-size:16px; font-weight:700; display:block; margin: 8px 0;">
           904-555-1234
         </a>
 

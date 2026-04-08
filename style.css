@@ -32,14 +32,14 @@
 /* ==========================================================================
    1. FONTS & BRAND COLORS
 
-   BRAND COLORS — Jaguars-inspired palette:
-   --teal       → primary brand color (buttons, headings, accents)
-   --teal-dark  → nav, footer, dark sections
-   --gold       → accent color (phone numbers, CTA buttons)
+   BRAND COLORS — Logo-matched coastal palette:
+   --teal       → primary brand color (buttons, headings, accents) — cobalt blue
+   --teal-dark  → nav, footer, dark sections — deep navy
+   --gold       → accent color (phone numbers, CTA buttons) — burnt orange
    --white      → card backgrounds, text on dark backgrounds
 
    TO CHANGE A COLOR SITE-WIDE: edit the hex value here — it updates everywhere.
-   Example: to change main teal, edit "--teal: #00A693;" below.
+   Example: to change main blue, edit "--teal: #1A6BB5;" below.
 
    FONTS (loaded from Google Fonts — requires internet):
    - Barlow Condensed 700/900 → headings, logo, large display text
@@ -50,15 +50,15 @@
 
 :root {
   /* Primary brand colors */
-  --teal:       #00A693;   /* main teal — buttons, links, icons */
-  --teal-dark:  #0D3D30;   /* dark teal — nav, footer, dark sections */
-  --teal-mid:   #085041;   /* mid teal — dividers inside dark sections */
-  --teal-light: #E1F5EE;   /* light teal — card backgrounds, area pills */
-  --teal-soft:  #9FDFCB;   /* soft teal — muted text on dark backgrounds */
+  --teal:       #1A6BB5;   /* cobalt blue — buttons, links, icons */
+  --teal-dark:  #0D2358;   /* deep navy — nav, footer, dark sections */
+  --teal-mid:   #0A1C47;   /* darker navy — dividers inside dark sections */
+  --teal-light: #E8F0FB;   /* light blue — card backgrounds, area pills */
+  --teal-soft:  #A8C4E8;   /* soft blue — muted text on dark backgrounds */
 
   /* Accent color */
-  --gold:       #D4AF37;   /* gold — phone numbers, CTA buttons, highlights */
-  --gold-dark:  #412402;   /* dark gold — text ON gold buttons */
+  --gold:       #C8581A;   /* burnt orange — phone numbers, CTA buttons, highlights */
+  --gold-dark:  #3D1500;   /* dark brown — text ON orange buttons */
 
   /* Neutrals */
   --black:      #1a1a1a;   /* near-black — primary body text */
