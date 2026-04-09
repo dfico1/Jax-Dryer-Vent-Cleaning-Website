@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
           &copy; ${new Date().getFullYear()} Jax Dryer Vent Cleaners LLC
           &middot; Jacksonville, FL
           &middot; Licensed &amp; Insured
-          &middot; <a href="index.html" style="color:inherit;">jaxdryerventcleaners.com</a>
+          &middot; <a href="index.html" style="color:inherit;">jaxdryerventcleaning.com</a>
         </div>
 
       </div>
