@@ -50,19 +50,19 @@
 
 :root {
   /* Primary brand colors */
-  --teal:       #1A6BB5;   /* cobalt blue — buttons, links, icons */
-  --teal-dark:  #0D2358;   /* deep navy — nav, footer, dark sections */
-  --teal-mid:   #0A1C47;   /* darker navy — dividers inside dark sections */
-  --teal-light: #E8F0FB;   /* light blue — card backgrounds, area pills */
-  --teal-soft:  #A8C4E8;   /* soft blue — muted text on dark backgrounds */
+  --teal:       #007bff;   /* vibrant blue — buttons, links, icons */
+  --teal-dark:  #0056b3;   /* darker blue — nav, footer, dark sections */
+  --teal-mid:   #004085;   /* even darker blue — dividers inside dark sections */
+  --teal-light: #e0f0ff;   /* very light blue — card backgrounds, area pills */
+  --teal-soft:  #a0c0e0;   /* soft blue — muted text on dark backgrounds */
 
   /* Accent color */
-  --gold:       #C8581A;   /* burnt orange — phone numbers, CTA buttons, highlights */
-  --gold-dark:  #3D1500;   /* dark brown — text ON orange buttons */
+  --gold:       #ffc107;   /* vibrant yellow-orange — phone numbers, CTA buttons, highlights */
+  --gold-dark:  #cc9a00;   /* darker yellow-orange — text ON orange buttons */
 
   /* Neutrals */
   --black:      #1a1a1a;   /* near-black — primary body text */
-  --gray:       #f5f5f2;   /* off-white — alternating section backgrounds */
+  --gray:       #f8f9fa;   /* light gray — alternating section backgrounds */
   --text:       #1a1a1a;   /* body text color */
   --text-muted: #555555;   /* secondary/muted text */
   --white:      #ffffff;
