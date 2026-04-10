@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <!-- TO CHANGE: swap Logo_v2_transparent_background.png for a new file -->
         <a href="index.html" class="nav-logo">
           <img
-            src="Logo_v2_transparent_background.png"
+            src="Images/Logo transparent background.png"
             alt="Jax Dryer Vent Cleaners logo"
             style="height:64px; width:auto; display:block;"
           />

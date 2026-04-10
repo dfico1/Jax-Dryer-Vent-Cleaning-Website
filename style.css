@@ -180,7 +180,7 @@ nav {
 /* "Book now" gold pill button in nav */
 .nav-cta {
   background: var(--gold);
-  color: var(--gold-dark) !important;
+  color: var(--teal-dark) !important;
   padding: 8px 18px;
   border-radius: var(--radius);
   font-weight: 700 !important;
@@ -239,7 +239,7 @@ nav {
 .btn:hover  { opacity: 0.9; }
 .btn:active { transform: scale(0.98); }
 
-.btn-gold    { background: var(--gold);   color: var(--gold-dark); }
+.btn-gold    { background: var(--gold);   color: var(--teal-dark); }
 .btn-white   { background: var(--white);  color: var(--teal-dark); }
 .btn-outline { background: transparent;   color: var(--white); border: 2px solid var(--white); }
 .btn-teal    { background: var(--teal);   color: var(--white); }
@@ -264,6 +264,8 @@ nav {
 }
 
 .section-label-light { color: var(--teal-soft); }
+.hero .section-label-light { color: var(--white); }
+.hero .btn-gold { background: var(--white); color: var(--teal-dark); }
 
 
 /* ==========================================================================
@@ -277,13 +279,17 @@ nav {
    ========================================================================== */
 
 .hero {
-  background: var(--teal);
+  background: url('Images/Hero-Image.jpg') center/cover no-repeat;
   padding: 72px 24px 64px;
 }
 
 .hero-inner {
-  max-width: var(--max);
-  margin: 0 auto;
+  max-width: 620px;
+  margin: 0;
+  background: rgba(10, 28, 71, 0.82);
+  padding: 40px 44px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
 }
 
 .hero h1 {
@@ -447,6 +453,13 @@ nav {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
+}
+
+.service-grid-2col {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service-card {
@@ -872,8 +885,8 @@ footer {
 
 .pricing-card { border: 0.5px solid #ddd; border-radius: 10px; overflow: hidden; }
 
-/* Colored top section — teal by default */
-.pricing-card-header { background: var(--teal); padding: 20px 24px; }
+/* Dark navy top section */
+.pricing-card-header { background: #0A1C47; padding: 20px 24px; }
 
 .pricing-card-header h3 {
   font-family: 'Barlow Condensed', sans-serif;
@@ -925,11 +938,12 @@ footer {
 
 /* Tablets and phones (768px and below) */
 @media (max-width: 768px) {
-  .nav-links     { display: none; } /* hide desktop nav links */
-  .nav-hamburger { display: flex; } /* show hamburger icon instead */
-  .stat          { padding: 8px 16px; } /* tighten stats so all 4 fit in a row */
-  .section       { padding: 48px 20px; } /* reduce section vertical padding */
-  .hero          { padding: 48px 20px 44px; }
+  .nav-links       { display: none; } /* hide desktop nav links */
+  .nav-hamburger   { display: flex; } /* show hamburger icon instead */
+  .stat            { padding: 8px 16px; } /* tighten stats so all 4 fit in a row */
+  .section         { padding: 48px 20px; } /* reduce section vertical padding */
+  .hero            { padding: 48px 20px 44px; }
+  .service-grid-2col { grid-template-columns: 1fr; } /* stack to 1 col on mobile */
 }
 
 /* Phones only (700px and below) */
