@@ -115,16 +115,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
           <!-- Page links — active page shows in white with underline -->
           <li><a href="index.html"    ${activeIf('index.html')}>Home</a></li>
-          <li><a href="services.html" ${activeIf('services.html')}>Services &amp; Pricing</a></li>
+          <li><a href="services.html" ${activeIf('services.html')}>Services</a></li>
           <li><a href="areas.html"    ${activeIf('areas.html')}>Service Areas</a></li>
           <li><a href="gallery.html"  ${activeIf('gallery.html')}>Gallery</a></li>
           <li><a href="blog.html"     ${activeIf('blog.html')}>Blog</a></li>
           <li><a href="about.html"    ${activeIf('about.html')}>About</a></li>
           <li><a href="contact.html"  ${activeIf('contact.html')}>Contact</a></li>
-
-          <!-- Phone number — links directly to call on mobile -->
-          <!-- TO CHANGE: update display text AND the tel: number (no dashes) -->
-          <li><a href="tel:9045551234" class="nav-phone">904-555-1234</a></li>
 
           <!-- "Book now" CTA button — links to contact page with Jobber form -->
           <!-- JOBBER UPGRADE: replace href with your Jobber direct booking URL -->
@@ -132,25 +128,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
         </ul>
 
-        <!-- ── MOBILE HAMBURGER ICON ── -->
-        <!-- Clicking this shows/hides the #mobile-nav dropdown -->
-        <!-- Styled in style.css section 4 — toggle logic is toggleMobileNav() below -->
-        <div class="nav-hamburger" onclick="toggleMobileNav()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-      </div>
-    </nav>
-
-    <!-- ── MOBILE DROPDOWN MENU ── -->
-    <!-- Hidden by default — shown when hamburger is clicked -->
-    <!-- Stacked vertically for easy thumb tapping on phones -->
-    <div id="mobile-nav" style="display:none; background:#0D2358; padding:16px 24px; border-top: 1px solid #0A1C47;">
-      <ul style="list-style:none; display:flex; flex-direction:column; gap:16px;">
+        <!-- ── MOBILE HAMBURGER ICON — hover to reveal dropdown ── -->
+        <div class="nav-hamburger-wrap">
+          <div class="nav-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div id="mobile-nav" class="mobile-nav-dropdown">
+      <ul>
         <li><a href="index.html"    style="color:#A8C4E8; font-size:15px; font-weight:600;">Home</a></li>
-        <li><a href="services.html" style="color:#A8C4E8; font-size:15px; font-weight:600;">Services &amp; Pricing</a></li>
+        <li><a href="services.html" style="color:#A8C4E8; font-size:15px; font-weight:600;">Services</a></li>
         <li><a href="areas.html"    style="color:#A8C4E8; font-size:15px; font-weight:600;">Service Areas</a></li>
         <li><a href="gallery.html"  style="color:#A8C4E8; font-size:15px; font-weight:600;">Gallery</a></li>
         <li><a href="blog.html"     style="color:#A8C4E8; font-size:15px; font-weight:600;">Blog</a></li>
@@ -165,7 +153,11 @@ document.addEventListener('DOMContentLoaded', function () {
           </a>
         </li>
       </ul>
-    </div>`;
+          </div><!-- end mobile-nav-dropdown -->
+        </div><!-- end nav-hamburger-wrap -->
+
+      </div>
+    </nav>`;
 
 
   /* ========================================================================
@@ -237,13 +229,3 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-/* ==========================================================================
-   MOBILE NAV TOGGLE FUNCTION
-   Called by onclick="toggleMobileNav()" on the hamburger icon.
-   Shows the mobile dropdown menu when hidden, hides it when visible.
-   ========================================================================== */
-function toggleMobileNav() {
-  const mobileNav = document.getElementById('mobile-nav');
-  if (!mobileNav) return;
-  mobileNav.style.display = mobileNav.style.display === 'none' ? 'block' : 'none';
-}

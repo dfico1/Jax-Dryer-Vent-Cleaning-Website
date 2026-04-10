@@ -188,14 +188,18 @@ nav {
 
 
 /* ==========================================================================
-   4. NAVIGATION — MOBILE HAMBURGER
+   4. NAVIGATION — MOBILE HAMBURGER (hover dropdown)
    Hidden on desktop, shown on mobile (breakpoint in section 23).
-   The mobile dropdown menu appears below the nav when hamburger is tapped.
-   Toggle logic is in components.js → toggleMobileNav()
+   Hovering the hamburger reveals the dropdown — no click needed.
    ========================================================================== */
 
-.nav-hamburger {
+.nav-hamburger-wrap {
   display: none; /* shown only on mobile via media query */
+  position: relative;
+}
+
+.nav-hamburger {
+  display: flex;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
@@ -209,6 +213,31 @@ nav {
   height: 2px;
   background: var(--teal-soft);
   border-radius: 2px;
+}
+
+/* Dropdown panel — hidden by default, shown on hover */
+.mobile-nav-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #0D2358;
+  padding: 16px 24px;
+  border-top: 1px solid #0A1C47;
+  border-radius: 0 0 8px 8px;
+  min-width: 220px;
+  z-index: 200;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.nav-hamburger-wrap:hover .mobile-nav-dropdown { display: block; }
+
+/* Keep dropdown visible when moving mouse from hamburger into it */
+.mobile-nav-dropdown ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 
@@ -279,7 +308,7 @@ nav {
    ========================================================================== */
 
 .hero {
-  background: url('Images/Hero-Image.jpg') center/cover no-repeat;
+  background: url('Images/Hero-Image3.jpg') center/cover no-repeat;
   padding: 72px 24px 64px;
 }
 
@@ -938,8 +967,8 @@ footer {
 
 /* Tablets and phones (768px and below) */
 @media (max-width: 768px) {
-  .nav-links       { display: none; } /* hide desktop nav links */
-  .nav-hamburger   { display: flex; } /* show hamburger icon instead */
+  .nav-links           { display: none; } /* hide desktop nav links */
+  .nav-hamburger-wrap  { display: flex; } /* show hamburger icon instead */
   .stat            { padding: 8px 16px; } /* tighten stats so all 4 fit in a row */
   .section         { padding: 48px 20px; } /* reduce section vertical padding */
   .hero            { padding: 48px 20px 44px; }
