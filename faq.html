@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  ============================================================================
+  JAX DRYER VENT CLEANERS — FAQ PAGE
+  File: faq.html
+
+  PAGE SECTIONS (in order):
+  1.  <head>        SEO meta tags
+  2.  Nav           Injected by components.js
+  3.  Page hero     Teal header
+  4.  FAQ           Collapsible question/answer sections
+  5.  CTA band      Dark section with phone number
+  6.  Footer        Injected by components.js
+
+  TO ADD A QUESTION: copy a .faq-item div and update the question + answer
+  TO REMOVE A QUESTION: delete a .faq-item div
+  ============================================================================
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dryer Vent Cleaning FAQ | Jax Dryer Vent Cleaners Jacksonville FL</title>
+  <meta name="description" content="Answers to common questions about dryer vent cleaning in Jacksonville, FL. How often, how long it takes, fire risk, pricing, and more. Call 904-555-1234.">
+  <link rel="canonical" href="https://www.jaxdryerventcleaning.com/faq.html">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── FAQ COLLAPSIBLE STYLES ── */
+    .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+
+    .faq-item {
+      border: 0.5px solid #ddd;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+      text-align: left;
+      font-family: 'Barlow', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      transition: background 0.15s;
+    }
+
+    .faq-question:hover { background: var(--gray); }
+
+    .faq-question.open { background: var(--teal-light); color: var(--teal-dark); }
+
+    /* Plus/minus chevron */
+    .faq-icon {
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--teal);
+      flex-shrink: 0;
+      line-height: 1;
+      transition: transform 0.2s;
+    }
+
+    .faq-question.open .faq-icon { transform: rotate(45deg); }
+
+    .faq-answer {
+      display: none;
+      padding: 0 24px 20px;
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      border-top: 0.5px solid #eee;
+    }
+
+    .faq-answer.open { display: block; }
+
+    .faq-category {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--teal);
+      text-transform: uppercase;
+      margin: 40px 0 16px;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .faq-category:first-of-type { margin-top: 0; }
+  </style>
+</head>
+
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <!-- ── PAGE HERO ── -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-label section-label-light">Frequently asked questions</div>
+      <h1>Everything you want to know about dryer vent cleaning.</h1>
+      <p>Can't find your answer? Call us at <a href="tel:9045551234" style="color:var(--gold); font-weight:700;">904-555-1234</a> — we're happy to help.</p>
+    </div>
+  </section>
+
+
+  <!-- ── FAQ SECTION ── -->
+  <section class="section">
+    <div class="container">
+
+      <!-- CATEGORY: Safety -->
+      <div class="faq-category">Safety</div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How dangerous is a clogged dryer vent?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Very. The U.S. Fire Administration reports that clogged dryer vents cause approximately 15,000 house fires every year, resulting in deaths, injuries, and hundreds of millions of dollars in property damage. Lint is highly flammable, and when it builds up inside the vent, even a small spark from the heating element can ignite it. A clean vent is one of the simplest ways to protect your home and family.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What are the warning signs that my dryer vent needs cleaning?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Watch for these warning signs:</p>
+            <ul style="margin-top:8px; padding-left:20px; display:flex; flex-direction:column; gap:6px;">
+              <li>Clothes take more than one cycle to dry fully</li>
+              <li>Clothes or the dryer itself feel unusually hot after a cycle</li>
+              <li>You notice a burning smell when the dryer is running</li>
+              <li>The laundry room feels more humid than usual</li>
+              <li>The exterior vent flap doesn't open when the dryer is on</li>
+              <li>It's been more than a year since your last cleaning</li>
+            </ul>
+            <p style="margin-top:10px;">If you notice any of these, stop using the dryer until it's been inspected.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Can I clean my dryer vent myself?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>You can remove lint from the lint trap and clean a few feet of duct with a brush kit from the hardware store — but this only addresses the first section of the vent. Most of the lint buildup occurs deeper in the run, around bends, and at the exterior termination point. A professional rotary brush system reaches the full length of the vent and measures airflow before and after to confirm it's clear. DIY cleaning often leaves the most dangerous buildup untouched.</p>
+          </div>
+        </div>
+
+      </div><!-- end safety faq-list -->
+
+
+      <!-- CATEGORY: Service -->
+      <div class="faq-category">Service</div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How much does dryer vent cleaning cost?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We provide quotes directly — call us at <a href="tel:9045551234" style="color:var(--teal); font-weight:600;">904-555-1234</a> or use the contact form and we'll get back to you quickly. Pricing depends on your specific vent configuration, and there are no hidden fees — the price you're quoted is the price you pay.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How long does a dryer vent cleaning take?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Most residential jobs are completed in 30–60 minutes from arrival to departure. That includes setup, the full clean, airflow testing, and cleanup. We'll communicate your arrival window ahead of time and show up when we say we will — and we'll call when we're on the way.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do you offer same-day service?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, same-day appointments are frequently available, especially on weekdays. Call us at <a href="tel:9045551234" style="color:var(--teal); font-weight:600;">904-555-1234</a> and we'll do our best to get you scheduled quickly. If you're seeing warning signs — burning smell, very long dry times — don't wait.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What payment methods do you accept?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We accept credit and debit cards, check, and Venmo. Payment is due at the time of service. We'll send you a digital invoice after the job is complete.</p>
+          </div>
+        </div>
+
+      </div><!-- end service faq-list -->
+
+
+      <!-- CATEGORY: How Often -->
+      <div class="faq-category">How Often</div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How often should I have my dryer vent cleaned?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>The Chimney Safety Institute of America, considered the gold standard for drvery vent safety, recommendation is once per year for most households. With Northeast Florida's high-humidity climate, lint compacts more quickly than in drier regions. Many homes benefit from cleaning every 6 months. You may also need more frequent cleaning if you have a large family doing heavy laundry, pets that shed, or a dryer vent run longer than 25 feet.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Does a new home need dryer vent cleaning?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, and sooner than most people expect. New construction in Jacksonville (Nocatee, St. Johns, Ponte Vedra) often features longer vent runs due to slab-on-grade layouts. These longer runs trap lint faster than shorter ones, and construction debris can also partially block the vent from day one. We recommend a first cleaning within the first year of moving in.</p>
+          </div>
+        </div>
+
+      </div><!-- end how often faq-list -->
+
+
+      <!-- CATEGORY: What to Expect -->
+      <div class="faq-category">What to Expect</div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What happens during a dryer vent cleaning appointment?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Here's exactly what we do:</p>
+            <ol style="margin-top:8px; padding-left:20px; display:flex; flex-direction:column; gap:6px;">
+              <li>We measure airflow at the start so you have a baseline reading</li>
+              <li>We run specialized equipment through the full length of the vent, from the dryer connection to the exterior termination</li>
+              <li>We inspect the exterior cap and clear any debris or blockages</li>
+              <li>We measure airflow again and give you the before/after numbers in a written report</li>
+              <li>We flag any issues — crushed duct, wrong materials, disconnected sections — and explain your options</li>
+            </ol>
+            <p style="margin-top:10px;">The whole process is clean and contained. We leave your home the same way we found it.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do I need to be home during the cleaning?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, someone should be home so we can access the laundry area and the exterior vent. If you have a specific situation (gated community, keypad, etc.), just let us know when you book and we'll work with you.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What if you find a problem with my vent during the cleaning?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>You don't pay if we cannot complete the cleaning. We'll show you exactly what we found and explain your options clearly — no pressure. Common issues include crushed or kinked ductwork, improper materials (like bathroom exhaust tubing instead of high temperature rated vent pipe), disconnected sections, or a blocked exterior cap. Many repairs can be done on the spot. If a repair is needed, we'll quote it before we do any additional work.</p>
+          </div>
+        </div>
+
+      </div><!-- end what to expect faq-list -->
+
+    </div>
+  </section>
+
+
+  <!-- ── CTA BAND ── -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="section-label section-label-light">Ready to book?</div>
+      <h2>Jacksonville's dryer vent specialist is one call away.</h2>
+      <p>Same-day service available. No surprises.</p>
+      <a href="tel:9045551234" class="cta-phone">904-555-1234</a>
+      <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+        <a href="tel:9045551234" class="btn btn-gold">Call now</a>
+        <a href="contact.html"   class="btn btn-outline">Book online</a>
+      </div>
+    </div>
+  </section>
+
+
+  <div id="footer-placeholder"></div>
+  <script src="components.js"></script>
+
+  <script>
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const isOpen = btn.classList.contains('open');
+
+      // Close all open items
+      document.querySelectorAll('.faq-question.open').forEach(q => {
+        q.classList.remove('open');
+        q.nextElementSibling.classList.remove('open');
+      });
+
+      // If it wasn't open, open it
+      if (!isOpen) {
+        btn.classList.add('open');
+        answer.classList.add('open');
+      }
+    }
+  </script>
+
+</body>
+</html>

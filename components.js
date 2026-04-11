@@ -116,9 +116,9 @@ document.addEventListener('DOMContentLoaded', function () {
           <!-- Page links — active page shows in white with underline -->
           <li><a href="index.html"    ${activeIf('index.html')}>Home</a></li>
           <li><a href="services.html" ${activeIf('services.html')}>Services</a></li>
-          <li><a href="areas.html"    ${activeIf('areas.html')}>Service Areas</a></li>
           <li><a href="gallery.html"  ${activeIf('gallery.html')}>Gallery</a></li>
           <li><a href="blog.html"     ${activeIf('blog.html')}>Blog</a></li>
+          <li><a href="faq.html"      ${activeIf('faq.html')}>FAQ</a></li>
           <li><a href="about.html"    ${activeIf('about.html')}>About</a></li>
           <li><a href="contact.html"  ${activeIf('contact.html')}>Contact</a></li>
 
@@ -139,9 +139,9 @@ document.addEventListener('DOMContentLoaded', function () {
       <ul>
         <li><a href="index.html"    style="color:#A8C4E8; font-size:15px; font-weight:600;">Home</a></li>
         <li><a href="services.html" style="color:#A8C4E8; font-size:15px; font-weight:600;">Services</a></li>
-        <li><a href="areas.html"    style="color:#A8C4E8; font-size:15px; font-weight:600;">Service Areas</a></li>
         <li><a href="gallery.html"  style="color:#A8C4E8; font-size:15px; font-weight:600;">Gallery</a></li>
         <li><a href="blog.html"     style="color:#A8C4E8; font-size:15px; font-weight:600;">Blog</a></li>
+        <li><a href="faq.html"      style="color:#A8C4E8; font-size:15px; font-weight:600;">FAQ</a></li>
         <li><a href="about.html"    style="color:#A8C4E8; font-size:15px; font-weight:600;">About</a></li>
         <li><a href="contact.html"  style="color:#A8C4E8; font-size:15px; font-weight:600;">Contact</a></li>
         <!-- Phone shown large in orange on mobile nav — most important action -->
