@@ -165,7 +165,23 @@ nav {
   box-shadow: 0 8px 24px rgba(0,0,0,0.3);
 }
 
-.nav-hamburger-wrap:hover .mobile-nav-dropdown { display: block; }
+.mobile-nav-dropdown.is-active { display: block; }
+
+/* Sticky Mobile CTA */
+.mobile-sticky-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #C49A3D; /* Gold/Teal contrast */
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  font-weight: 800;
+  z-index: 999;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+}
 
 .mobile-nav-dropdown ul {
   list-style: none;
@@ -762,6 +778,7 @@ footer {
   .hero            { padding: 48px 20px 44px; }
   .service-grid-2col { grid-template-columns: 1fr; }
   .hero-trust      { flex-wrap: wrap; gap: 10px; }
+  .mobile-sticky-cta { display: block; }
 }
 
 @media (max-width: 700px) {

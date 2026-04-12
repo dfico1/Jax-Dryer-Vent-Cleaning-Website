@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         <!-- Mobile hamburger — hover to reveal dropdown -->
         <div class="nav-hamburger-wrap">
-          <div class="nav-hamburger">
+          <div class="nav-hamburger" id="hamburger-toggle">
             <span></span><span></span><span></span>
           </div>
           <div id="mobile-nav" class="mobile-nav-dropdown">
@@ -76,7 +76,13 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
 
       </div>
-    </nav>`;
+    </nav>
+    
+    <!-- Sticky Mobile Call Button -->
+    <a href="tel:9045551234" class="mobile-sticky-cta">
+      <span>Call for Same-Day Service: 904-555-1234</span>
+    </a>
+    `;
 
 
   // ── FOOTER ───────────────────────────────────────────────────────────────
@@ -115,4 +121,13 @@ document.addEventListener('DOMContentLoaded', function () {
   if (navEl)    navEl.innerHTML    = navHTML;
   if (footerEl) footerEl.innerHTML = footerHTML;
 
+  // Mobile menu toggle logic
+  const hamburger = document.getElementById('hamburger-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', function(e) {
+      mobileNav.classList.toggle('is-active');
+      e.stopPropagation();
+    });
+  }
 });
