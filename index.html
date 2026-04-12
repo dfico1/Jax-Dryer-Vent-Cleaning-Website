@@ -1,90 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--
-  ============================================================================
-  JAX DRYER VENT CLEANERS — HOMEPAGE
-  File: index.html
-
-  PAGE SECTIONS (in order):
-  1.  <head>         SEO meta tags, page title, schema markup
-  2.  Nav            Injected by components.js (edit nav there, not here)
-  3.  Hero           Large teal header with headline + CTA buttons
-  4.  Stats bar      Dark band with key numbers ($150, 5.0★, Same day, 10+ yrs)
-  5.  Services       4-card grid overview of services
-  6.  How it works   4-step numbered process
-  7.  Reviews        3 customer review cards
-  8.  Areas preview  Neighborhood pills linking to areas.html
-  9.  CTA band       Dark bottom section with large phone number
-  10. Footer         Injected by components.js
-
-  QUICK CHANGE GUIDE:
-  ─────────────────────────────────────────────────────────────
-  Phone number       → search "904-555-1234" and replace everywhere
-                       also update href="tel:9045551234" (no dashes)
-  Hero headline      → edit the <h1> tag in the HERO section
-  Hero subheading    → edit the <p class="hero-sub"> tag
-  Stats              → edit .stat-num values in the STATS BAR section
-  Services           → add/edit/remove .service-card divs in SERVICES section
-  Reviews            → edit .review-card divs — replace with real quotes ASAP
-  Service areas      → add/edit .area-pill divs in AREAS PREVIEW section
-  ─────────────────────────────────────────────────────────────
-  ============================================================================
--->
+<!-- JAX DRYER VENT CLEANERS — HOMEPAGE (index.html) -->
 
 <head>
-  <!-- ── REQUIRED META TAGS — do not remove these ── -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- ════════════════════════════════════════════════════════════════════
-       SEO: PAGE TITLE
-       This is what appears in Google search results as the blue clickable link.
-       Best practice: Primary keyword | Business name
-       Max length: ~60 characters (Google truncates longer titles)
-       TO CHANGE: edit the text between <title> tags
-       ════════════════════════════════════════════════════════════════════ -->
   <title>Dryer Vent Cleaning Jacksonville FL | Jax Dryer Vent Cleaning</title>
-
-  <!-- ════════════════════════════════════════════════════════════════════
-       SEO: META DESCRIPTION
-       The gray snippet text shown under the title in Google results.
-       Does not directly affect ranking but DOES affect click-through rate.
-       Best practice: Include city, primary service, phone, differentiator.
-       Max length: ~155 characters
-       ════════════════════════════════════════════════════════════════════ -->
   <meta name="description" content="Professional dryer vent cleaning from Jacksonville to Gainesville, Lake City, &amp; Palm Coast. Same-day service available. Residential &amp; commercial. Call 904-555-1234.">
-
-  <!-- ════════════════════════════════════════════════════════════════════
-       SEO: KEYWORDS
-       Less important than they used to be, but still worth including.
-       Focus on local + service-specific phrases people actually search.
-       ════════════════════════════════════════════════════════════════════ -->
   <meta name="keywords" content="dryer vent cleaning Jacksonville, Gainesville dryer vent cleaning, Lake City vent cleaning, Palm Coast dryer vent service, Riverside, San Marco, Orange Park, Middleburg, Palatka, St. John's, Nocatee, St. Augustine dryer vent cleaning">
-
-  <!-- ════════════════════════════════════════════════════════════════════
-       SEO: CANONICAL URL
-       Tells Google the "official" URL for this page to prevent duplicate content.
-       UPDATE THIS: replace with your actual domain once it's live.
-       ════════════════════════════════════════════════════════════════════ -->
   <link rel="canonical" href="https://www.jaxdryerventcleaning.com/index.html">
-
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SEO: SCHEMA MARKUP (JSON-LD)
-       This is invisible structured data that tells Google exactly what
-       your business is, where it is, what it does, and how to reach it.
-       It powers rich results in Google Search and Google Maps.
-
-       IMPORTANT — UPDATE BEFORE GOING LIVE:
-       - "telephone"    → your real phone number in +1XXXXXXXXXX format
-       - "url"          → your real domain
-       - "openingHours" → your actual hours (Mo-Sa = Monday to Saturday)
-
-       REFERENCE: https://schema.org/LocalBusiness
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- Schema markup — update telephone and url before going live -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -115,156 +43,90 @@
 
 <body>
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 1 — NAVIGATION
-       DO NOT edit the nav here. Edit components.js instead.
-       The nav HTML is injected here automatically when the page loads.
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- NAV — injected by components.js -->
   <div id="nav-placeholder"></div>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 2 — HERO
-       The large teal header. First thing visitors see.
-       Contains: eyebrow label | H1 | subheading | 2 buttons | trust badges
-
-       SEO NOTES:
-       - The H1 must contain your primary keyword "dryer vent cleaning Jacksonville"
-       - Only ONE <h1> per page
-       - The <span> inside H1 renders in gold — highlights "Jacksonville, FL"
-
-       TO CHANGE:
-       - Headline: edit the <h1> text
-       - Subheading: edit the <p class="hero-sub"> text
-       - Button text/links: edit the two .btn anchor tags
-       - Trust badges: add/edit/remove .trust-item divs
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-
-      <!-- Small uppercase eyebrow label above H1 -->
       <div class="section-label section-label-light">Northeast Florida's dryer vent specialists</div>
-
-      <!-- PRIMARY HEADLINE — fire safety stat as the hook -->
       <h1>Dryer vents cause <span>15,000 house fires</span> per year.</h1>
-
-      <!-- Supporting subheading -->
       <p class="hero-sub">
         Dryer vent cleaning in Northeast Florida — done right. We clean, inspect, and certify your dryer vent so your family stays safe and your dryer runs like new.
       </p>
-
-      <!-- CTA BUTTONS
-           btn-gold    = primary action (calling is always preferred)
-           btn-outline = secondary action (online booking via contact/Jobber page)
-           TO CHANGE: update href and button text below -->
       <div class="hero-buttons">
         <a href="tel:9045551234" class="btn btn-gold">Call 904-555-1234</a>
         <a href="contact.html"   class="btn btn-outline">Book online</a>
       </div>
-
-      <!-- TRUST BADGES — small dot + text credibility signals
-           TO ADD: copy a .trust-item div and update the text
-           TO REMOVE: delete a .trust-item div -->
       <div class="hero-trust">
         <div class="trust-item"><div class="trust-dot"></div>Same-day available</div>
         <div class="trust-item"><div class="trust-dot"></div>Transparent pricing — no surprises</div>
         <div class="trust-item"><div class="trust-dot"></div>Before &amp; after airflow report</div>
       </div>
-
     </div>
   </section>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 3 — STATS BAR
-       Dark band with 4 key numbers. High credibility signal.
-
-       TO UPDATE A NUMBER: edit the text inside .stat-num
-       TO ADD A STAT: copy a .stat div (note: 5+ stats may wrap on mobile)
-       TO REMOVE A STAT: delete a .stat div
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- STATS BAR -->
   <div class="stats-bar">
     <div class="stats-inner">
-
-      <!-- Stat 1: Google rating — UPDATE once you have real reviews -->
       <div class="stat">
         <div class="stat-num">5.0★</div>
         <div class="stat-label">Google rating</div>
       </div>
-
-      <!-- Stat 3: Same-day availability -->
       <div class="stat">
         <div class="stat-num">Same day</div>
         <div class="stat-label">Service available</div>
       </div>
-
-      <!-- Stat 4: Satisfaction guarantee -->
       <div class="stat">
         <div class="stat-num">100%</div>
         <div class="stat-label">Satisfaction guaranteed</div>
       </div>
-
     </div>
   </div>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 4 — SERVICES OVERVIEW
-       6-card grid giving visitors a quick overview of all service types.
-       Each card links conceptually to full details on services.html.
-
-       TO ADD A SERVICE: copy a .service-card div and update content
-       TO REMOVE A SERVICE: delete a .service-card div
-       TO CHANGE A PRICE: edit the .service-price div text
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- SERVICES OVERVIEW -->
   <section class="section">
     <div class="container">
-
-      <!-- Section header -->
       <div class="section-header">
         <div class="section-label">What we do</div>
         <h2>Not a side service. It's all we do.</h2>
-        <p>
-          We are dedicated dryer vent specialistcs.That focus means better equipment,
-          faster service, and results you can measure.
-        </p>
+        <p>We are dedicated dryer vent specialists. That focus means better equipment, faster service, and results you can measure.</p>
       </div>
 
-      <!-- SERVICE CARD GRID — 6 cards, auto-fits to 3 columns on desktop, 1 on mobile -->
       <div class="service-grid service-grid-2col">
 
-        <!-- Card 1: Standard cleaning -->
         <div class="service-card">
           <div class="service-icon">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
               <rect x="2" y="3" width="13" height="16" rx="2" stroke="#1A6BB5" stroke-width="1.5"/>
               <circle cx="8.5" cy="13" r="4" stroke="#1A6BB5" stroke-width="1.5"/>
               <line x1="15" y1="11" x2="20" y2="11" stroke="#1A6BB5" stroke-width="1.5"/>
-              <path d="M20 8 Q17 11 20 14" stroke="#C8581A" stroke-width="1.5" fill="none"/>
+              <path d="M20 8 Q17 11 20 14" stroke="#0D2358" stroke-width="1.5" fill="none"/>
             </svg>
           </div>
           <h3>Standard dryer vent cleaning</h3>
           <p>Full cleaning from interior laundry room to exterior termination. Airflow measured before and after to ensure the job is done right the first time.</p>
         </div>
 
-        <!-- Card 2: Commercial -->
         <div class="service-card">
           <div class="service-icon">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
               <rect x="2" y="2" width="8" height="18" rx="2" stroke="#1A6BB5" stroke-width="1.5"/>
               <rect x="12" y="2" width="8" height="18" rx="2" stroke="#1A6BB5" stroke-width="1.5"/>
-              <line x1="10" y1="11" x2="12" y2="11" stroke="#C8581A" stroke-width="2"/>
+              <line x1="10" y1="11" x2="12" y2="11" stroke="#0D2358" stroke-width="2"/>
             </svg>
           </div>
           <h3>Commercial &amp; multi-family</h3>
           <p>Apartment complexes, HOA communities, laundromats, and retirement homes. We become your recurring service partner.</p>
         </div>
 
-        <!-- Card 5: Vent repair -->
         <div class="service-card">
           <div class="service-icon">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-              <path d="M11 3 Q8 7 9 11 Q10 14 11 13 Q12 14 13 11 Q14 7 11 3Z" stroke="#C8581A" stroke-width="1.5" fill="none"/>
+              <path d="M11 3 Q8 7 9 11 Q10 14 11 13 Q12 14 13 11 Q14 7 11 3Z" stroke="#0D2358" stroke-width="1.5" fill="none"/>
               <path d="M6 9 Q4 13 7 16 Q9 18 11 17 Q13 18 15 16 Q18 13 16 9" stroke="#1A6BB5" stroke-width="1.5" fill="none"/>
             </svg>
           </div>
@@ -272,46 +134,35 @@
           <p>Improper installs, crushed ducts, wrong materials — we can fix any problem. No need to call a separate contractor.</p>
         </div>
 
-        <!-- Card 6: Annual maintenance plan -->
         <div class="service-card">
           <div class="service-icon">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
               <rect x="2" y="4" width="18" height="14" rx="2" stroke="#1A6BB5" stroke-width="1.5"/>
-              <path d="M7 11 L10 14 L15 8" stroke="#C8581A" stroke-width="2" stroke-linecap="round"/>
+              <path d="M7 11 L10 14 L15 8" stroke="#0D2358" stroke-width="2" stroke-linecap="round"/>
             </svg>
           </div>
           <h3>Annual maintenance plan</h3>
           <p>Multiple cleanings per year at a discounted rate. We send you the reminder — you never have to think about it again.</p>
         </div>
 
-      </div><!-- end .service-grid -->
+      </div>
 
       <div style="text-align:center; margin-top:32px;">
         <a href="services.html" class="btn btn-teal">See all services</a>
       </div>
-
     </div>
   </section>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 5 — HOW IT WORKS
-       4-step numbered process. Reduces friction / objections.
-
-       TO ADD A STEP: copy a .step div and update the number + content
-       TO REMOVE A STEP: delete a .step div
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- HOW IT WORKS -->
   <section class="section section-gray">
     <div class="container">
-
       <div class="section-header">
         <div class="section-label">How it works</div>
         <h2>Simple, fast, and done right.</h2>
       </div>
 
       <div class="steps">
-
-        <!-- Step 1 -->
         <div class="step">
           <div class="step-num">1</div>
           <div>
@@ -319,8 +170,6 @@
             <p>Same-day and next-day appointments available. We give you an arrival window, and text you when we're on the way.</p>
           </div>
         </div>
-
-        <!-- Step 2 -->
         <div class="step">
           <div class="step-num">2</div>
           <div>
@@ -328,8 +177,6 @@
             <p>You'll know exactly who is coming to your home. We photograph the vent before we start and document any issues we find.</p>
           </div>
         </div>
-
-        <!-- Step 3 -->
         <div class="step">
           <div class="step-num">3</div>
           <div>
@@ -337,45 +184,27 @@
             <p>Our commercial grade equipment removes all lint buildup from interior to exterior. We test airflow in CFM before and after — you get a written report proving the job was done.</p>
           </div>
         </div>
-
-        <!-- Step 4 -->
         <div class="step">
           <div class="step-num">4</div>
           <div>
-            <h3>Digital invoice and convient payment options: credit card, check, cash, Apple/Android pay, Zelle, Venmo. </h3>
-            <p>We send reminders every year so you never have to think about it again.</p>
+            <h3>Easy payment &amp; annual reminders</h3>
+            <p>We accept credit card, check, Venmo, and Zelle. Digital invoice sent immediately. We remind you each year — you never have to think about it.</p>
           </div>
         </div>
-
-      </div><!-- end .steps -->
+      </div>
     </div>
   </section>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 6 — CUSTOMER REVIEWS
-       Social proof. Replace placeholder quotes with real customer reviews ASAP.
-
-       SEO TIP: Include the customer's neighborhood name (e.g. "Ponte Vedra Beach")
-       in the .reviewer line — this helps you rank for local neighborhood searches.
-
-       TO ADD A REVIEW: copy a .review-card div and update the quote + reviewer
-       TO REMOVE A REVIEW: delete a .review-card div
-
-       ALSO: Set up Jobber's automatic review request feature to collect
-       Google reviews after every completed job — this builds your ranking fast.
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- REVIEWS -->
   <section class="section">
     <div class="container">
-
       <div class="section-header">
         <div class="section-label">Reviews</div>
         <h2>Trusted by Jacksonville homeowners &amp; property managers.</h2>
       </div>
 
       <div class="reviews-grid">
-
-        <!-- Review 1 — REPLACE WITH REAL CUSTOMER QUOTE -->
         <div class="review-card">
           <div class="stars">
             <div class="star"></div><div class="star"></div><div class="star"></div>
@@ -384,8 +213,6 @@
           <p class="review-text">"Dan showed up on time, explained everything clearly, and showed me the before and after airflow numbers. My dryer runs so much better. Worth every penny."</p>
           <div class="reviewer">Sarah M. &mdash; Ponte Vedra Beach</div>
         </div>
-
-        <!-- Review 2 — REPLACE WITH REAL CUSTOMER QUOTE -->
         <div class="review-card">
           <div class="stars">
             <div class="star"></div><div class="star"></div><div class="star"></div>
@@ -394,8 +221,6 @@
           <p class="review-text">"We manage 40 units in Southside and needed someone reliable. Jax Dryer Vent Cleaners handles all of them. Professional, fast, and the tenants love them."</p>
           <div class="reviewer">Mike T. &mdash; Property Manager, Jacksonville</div>
         </div>
-
-        <!-- Review 3 — REPLACE WITH REAL CUSTOMER QUOTE -->
         <div class="review-card">
           <div class="stars">
             <div class="star"></div><div class="star"></div><div class="star"></div>
@@ -404,33 +229,20 @@
           <p class="review-text">"I had no idea how clogged my vent was. He pulled out what looked like a full pillow of lint. My dryer used to take two cycles — now one does it. Highly recommend."</p>
           <div class="reviewer">Karen L. &mdash; Mandarin</div>
         </div>
-
-      </div><!-- end .reviews-grid -->
+      </div>
     </div>
   </section>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 7 — SERVICE AREAS PREVIEW
-       Shows the main neighborhoods as clickable-looking pills.
-       Links to the full areas.html page for detailed SEO content.
-
-       SEO NOTE: Every neighborhood name on this page (and especially on
-       areas.html) helps you rank for "[neighborhood] dryer vent cleaning" searches.
-
-       TO ADD AN AREA: copy an .area-pill div and update the name
-       TO REMOVE AN AREA: delete an .area-pill div
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- SERVICE AREAS PREVIEW -->
   <section class="section section-gray">
     <div class="container">
-
       <div class="section-header">
         <div class="section-label">Where we work</div>
         <h2>Serving Jacksonville &amp; surrounding communities.</h2>
         <p>We cover the entire greater Jacksonville metro — from Fernandina Beach to St. Augustine and beyond.</p>
       </div>
 
-      <!-- AREA PILLS — add your neighborhoods here -->
       <div class="areas-grid">
         <div class="area-pill">Ponte Vedra</div>
         <div class="area-pill">Jacksonville Beach</div>
@@ -452,49 +264,30 @@
         <div class="area-pill">Palatka</div>
       </div>
 
-      <!-- Link to full service areas page (better for SEO — more content there) -->
       <div style="margin-top:24px;">
         <a href="areas.html" class="btn btn-teal">See all service areas</a>
       </div>
-
     </div>
   </section>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 8 — CTA BAND
-       Dark call-to-action. The large phone number is the most important element.
-       Appears on every page — this is the homepage version.
-
-       TO CHANGE: update phone number display text and tel: href
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- CTA BAND -->
   <section class="cta-band">
     <div class="container">
-
       <div class="section-label section-label-light">Ready to book?</div>
       <h2>Jacksonville's dryer vent specialist is one call away.</h2>
       <p>Same-day service available. No surprises.</p>
-
-      <!-- Large gold phone number — most important conversion element -->
       <a href="tel:9045551234" class="cta-phone">904-555-1234</a>
-
-      <!-- Secondary buttons below phone number -->
       <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
         <a href="tel:9045551234" class="btn btn-gold">Call now</a>
         <a href="contact.html"   class="btn btn-outline">Book online</a>
       </div>
-
     </div>
   </section>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 9 — FOOTER
-       DO NOT edit the footer here. Edit components.js instead.
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- FOOTER — injected by components.js -->
   <div id="footer-placeholder"></div>
-
-  <!-- Load shared nav + footer — must be last script on page -->
   <script src="components.js"></script>
 
 </body>

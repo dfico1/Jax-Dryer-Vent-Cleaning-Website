@@ -1,59 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--
-  ============================================================================
-  JAX DRYER VENT CLEANERS — SERVICES & PRICING PAGE
-  File: services.html
-
-  PAGE SECTIONS (in order):
-  1.  <head>          SEO meta tags
-  2.  Nav             Injected by components.js
-  3.  Page hero       Teal header
-  4.  Residential     3 pricing cards (Standard, Extended, Annual plan)
-  5.  Add-ons         Table of optional add-on services
-  6.  Commercial      3 pricing cards (Per-unit, Laundromat, HOA audit)
-  7.  Why specialist  3-card differentiator section
-  8.  CTA band        Dark bottom section with phone number
-  9.  Footer          Injected by components.js
-
-  QUICK CHANGE GUIDE:
-  ─────────────────────────────────────────────────────────────
-  Change a price      → find the .price div inside the pricing card and edit
-  Add a service       → copy a .pricing-card div and update all text
-  Add an add-on       → copy a .pricing-item row in the add-ons table
-  Change card color   → edit background on the .pricing-card-header div
-  ─────────────────────────────────────────────────────────────
-  ============================================================================
--->
+<!-- JAX DRYER VENT CLEANERS — SERVICES PAGE (services.html) -->
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO: Page title — includes pricing keyword -->
   <title>Dryer Vent Cleaning Services | Jax Dryer Vent Cleaners Jacksonville FL</title>
-
-  <!-- SEO: Meta description -->
   <meta name="description" content="Professional dryer vent cleaning for residential and commercial customers across Northeast Florida. Same-day available. Call 904-555-1234 for a quote.">
-
-  <!-- SEO: Canonical URL — update to your real domain before launch -->
   <link rel="canonical" href="https://www.jaxdryerventcleaning.com/services.html">
-
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 1 — NAVIGATION (injected by components.js)
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- NAV — injected by components.js -->
   <div id="nav-placeholder"></div>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 2 — PAGE HERO
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
       <div class="section-label section-label-light">What we offer</div>
@@ -63,26 +28,9 @@
   </section>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 3 — RESIDENTIAL PRICING CARDS
-       Three cards: Standard ($150), Extended ($179), Annual Plan ($249/yr)
-
-       TO CHANGE A PRICE:
-       Edit the text inside the <div class="price"> in each card header.
-
-       TO CHANGE CARD HEADER COLOR:
-       Add inline style="background: #0D2358;" to the .pricing-card-header div.
-       (The Annual Plan card already uses dark teal as an example.)
-
-       TO ADD A CARD:
-       Copy an entire .pricing-card div and update the content.
-
-       TO ADD/REMOVE A FEATURE ROW:
-       Copy or delete a .pricing-item div inside .pricing-card-body.
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- RESIDENTIAL SERVICES -->
   <section class="section">
     <div class="container">
-
       <div class="section-header">
         <div class="section-label">Residential</div>
         <h2>Single-family homes &amp; townhomes.</h2>
@@ -111,14 +59,13 @@
       <div style="text-align:center; margin-top:32px;">
         <a href="contact.html" class="btn btn-teal">Get a quote</a>
       </div>
-
     </div>
   </section>
 
 
+  <!-- COMMERCIAL SERVICES -->
   <section class="section section-gray">
     <div class="container">
-
       <div class="section-header">
         <div class="section-label">Commercial</div>
         <h2>Property managers, HOAs &amp; business owners.</h2>
@@ -144,29 +91,23 @@
 
       </div>
 
-      <div style="margin-top:28px; background:var(--teal-light); border-radius:8px; padding:20px 24px;">
-        <strong style="color:#0A1C47;">Need a commercial quote?</strong>
-        <span style="color:#0F6E56; margin-left:8px; font-size:15px;">
+      <div style="margin-top:28px; background:var(--navy-light); border-radius:8px; padding:20px 24px;">
+        <strong style="color:var(--navy);">Need a commercial quote?</strong>
+        <span style="color:var(--text-muted); margin-left:8px; font-size:15px;">
           Call us at
-          <a href="tel:9045551234" style="color:var(--teal); font-weight:600;">904-555-1234</a>
+          <a href="tel:9045551234" style="color:var(--navy); font-weight:700;">904-555-1234</a>
           or
-          <a href="contact.html" style="color:var(--teal); font-weight:600;">send a message.</a>
+          <a href="contact.html" style="color:var(--navy); font-weight:700;">send a message.</a>
           We'll put together a custom proposal within 24 hours.
         </span>
       </div>
-
     </div>
   </section>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 5 — WHY A SPECIALIST
-       3-card section explaining the differentiators vs. generalist competitors.
-       Addresses objections before the customer asks.
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- WHY A SPECIALIST -->
   <section class="section">
     <div class="container">
-
       <div class="section-header">
         <div class="section-label">Why us</div>
         <h2>What makes a specialist different?</h2>
@@ -174,32 +115,27 @@
 
       <div class="service-grid">
 
-        <!-- Differentiator 1: Measurement -->
         <div class="service-card">
           <h3>We measure everything</h3>
           <p>Every job includes a CFM airflow reading before and after. You get proof the job was done — not just our word for it. Most competitors skip this entirely.</p>
         </div>
 
-        <!-- Differentiator 2: Engineering background -->
         <div class="service-card">
           <h3>Decades of experience</h3>
           <p>A second generation dryer vent cleaning business owner, we diagnose and fix issues that other companies would ignore.</p>
         </div>
 
-        <!-- Differentiator 3: Specialization -->
         <div class="service-card">
           <h3>Dryer vents only</h3>
           <p>We don't clean ducts, gutters, or chimneys. Dryer vents is all we do. That means better equipment, deeper expertise, and faster service.</p>
         </div>
 
-      </div><!-- end .service-grid -->
+      </div>
     </div>
   </section>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 6 — CTA BAND
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- CTA BAND -->
   <section class="cta-band">
     <div class="container">
       <div class="section-label section-label-light">Get started</div>
@@ -214,9 +150,7 @@
   </section>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 7 — FOOTER (injected by components.js)
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- FOOTER — injected by components.js -->
   <div id="footer-placeholder"></div>
   <script src="components.js"></script>
 

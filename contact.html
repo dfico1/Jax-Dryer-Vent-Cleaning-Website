@@ -1,65 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--
-  ============================================================================
-  JAX DRYER VENT CLEANERS — CONTACT & BOOKING PAGE
-  File: contact.html
-
-  PAGE SECTIONS (in order):
-  1.  <head>            SEO meta tags
-  2.  Nav               Injected by components.js
-  3.  Page hero         Teal header with headline
-  4.  Contact grid      Two columns:
-        LEFT  → Jobber booking form (embed or placeholder)
-        RIGHT → Direct contact info (phone, email, hours)
-  5.  FAQ section       5 common questions (good for SEO)
-  6.  CTA band          Dark section with large phone number
-  7.  Footer            Injected by components.js
-
-  *** JOBBER SETUP — THIS PAGE IS WHERE JOBBER CONNECTS ***
-  See the JOBBER EMBED section below for step-by-step setup instructions.
-
-  QUICK CHANGE GUIDE:
-  ─────────────────────────────────────────────────────────────
-  Phone number     → search "904-555-1234" and update display text
-                     also update href="tel:9045551234" (no dashes)
-  Email address    → search "dan@jaxdryerventcleaners.com" and update
-  Business hours   → find "Mon–Saturday, 7am–6pm" and update
-  FAQ questions    → add/edit/remove .faq-item divs in FAQ section
-  ─────────────────────────────────────────────────────────────
-  ============================================================================
--->
+<!-- JAX DRYER VENT CLEANERS — CONTACT PAGE (contact.html) -->
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO: Page title — includes booking intent keyword -->
   <title>Book Dryer Vent Cleaning Jacksonville FL | Contact Jax Dryer Vent Cleaners</title>
-
-  <!-- SEO: Meta description — emphasizes same-day and fast response -->
   <meta name="description" content="Book dryer vent cleaning in Jacksonville, Gainesville, or Lake City. Same-day available across NE Florida. Call 904-555-1234 for a fast quote.">
-
-  <!-- SEO: Canonical URL — update to your real domain before launch -->
   <link rel="canonical" href="https://www.jaxdryerventcleaning.com/contact.html">
-
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 1 — NAVIGATION
-       Injected by components.js — do not edit nav here.
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- NAV — injected by components.js -->
   <div id="nav-placeholder"></div>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 2 — PAGE HERO
-       Smaller teal hero (inner page style, not full homepage hero).
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
       <div class="section-label section-label-light">Contact &amp; booking</div>
@@ -69,113 +28,29 @@
   </section>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 3 — CONTACT GRID
-       Two-column layout:
-       LEFT  → Jobber booking embed (or fallback form before Jobber is set up)
-       RIGHT → Direct contact info sidebar
-
-       The grid stacks to a single column on mobile (< 700px breakpoint).
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- CONTACT GRID -->
   <section class="section">
     <div class="container">
       <div class="contact-grid">
 
-
-        <!-- ╔══════════════════════════════════════════════════════════════
-             ║  LEFT COLUMN — JOBBER BOOKING FORM
-             ║
-             ║  *** THIS IS WHERE JOBBER PLUGS IN ***
-             ║
-             ║  CURRENT STATE: Shows a yellow placeholder notice.
-             ║
-             ║  TO ACTIVATE JOBBER (step by step):
-             ║  ─────────────────────────────────────────────────────────
-             ║  1. Sign up at getjobber.com (Core plan minimum)
-             ║     → Free 14-day trial available, 20% off first 6 months
-             ║
-             ║  2. In Jobber: Settings → Requests and Bookings
-             ║     → Create a new request form
-             ║     → Name it e.g. "Book a Cleaning"
-             ║     → Add your services: Standard ($149), Extended ($179), etc.
-             ║     → Enable address field, service selector, preferred date
-             ║     → Toggle ON "Visible to clients and customers"
-             ║
-             ║  3. Click "Share" on your form → click "Embed" tab
-             ║     → Copy the embed URL (looks like below)
-             ║
-             ║  4. In this file, find the iframe below labeled
-             ║     "JOBBER EMBED — REPLACE SRC BELOW"
-             ║     Replace the src="PASTE-YOUR-JOBBER-URL-HERE" value
-             ║     with your actual Jobber embed URL
-             ║
-             ║  5. Delete the entire .jobber-placeholder div
-             ║     (the yellow dashed box — it's only shown before Jobber is live)
-             ║
-             ║  6. Save this file and re-upload to GitHub
-             ║     → Netlify will auto-deploy within ~30 seconds
-             ║
-             ║  YOUR JOBBER EMBED URL FORMAT:
-             ║  https://clienthub.getjobber.com/client_hubs/YOUR-UNIQUE-ID/
-             ║  public/work_request/embedded_new_request
-             ║
-             ║  ADDITIONAL JOBBER INTEGRATIONS (do these too):
-             ║  ─────────────────────────────────────────────────────────
-             ║  Google Business Profile:
-             ║    Jobber → Settings → Requests → Share → "Direct link"
-             ║    Add this URL to your Google Business Profile booking button
-             ║    People can book straight from Google Maps — very high value
-             ║
-             ║  QR Code for business cards & door hangers:
-             ║    Take the Jobber direct link to qr-code-generator.com
-             ║    Download PNG and send to your business card printer
-             ║
-             ║  Facebook Page:
-             ║    Jobber → Settings → Requests → Share → Facebook icon
-             ║    Use this tracking link (not the generic one) for attribution
-             ║
-             ║  Automated review requests (set this up on day one!):
-             ║    Jobber → Settings → Automations → Review Request
-             ║    Set to send automatically X days after job completion
-             ║    This builds your Google review count without manual effort
-             ╚══════════════════════════════════════════════════════════════ -->
+        <!-- LEFT COLUMN — JOBBER BOOKING FORM
+             Once Jobber is configured: delete .jobber-placeholder below,
+             uncomment the iframe, and replace PASTE-YOUR-JOBBER-URL-HERE
+             with your actual embed URL from Jobber → Settings → Requests → Share → Embed -->
         <div>
-          <h2 style="font-family:'Barlow Condensed',sans-serif; font-size:28px; font-weight:900; margin-bottom:20px;">
+          <h2 style="font-family:'Montserrat',sans-serif; font-size:28px; font-weight:800; margin-bottom:20px;">
             Request a booking
           </h2>
 
-          <!-- ══ JOBBER PLACEHOLDER ══════════════════════════════════════
-               This yellow box is shown ONLY while Jobber is not yet set up.
-               DELETE THIS ENTIRE .jobber-placeholder DIV once Jobber is live.
-               ════════════════════════════════════════════════════════════ -->
           <div class="jobber-placeholder">
             <h3>Jobber booking form coming soon</h3>
             <p>Our online booking system is being configured. In the meantime, please call or text us directly to schedule your cleaning.</p>
             <p style="margin-top:10px;">
-              <a href="tel:9045551234" style="color:#1A6BB5; font-weight:700; font-size:18px;">904-555-1234</a>
+              <a href="tel:9045551234" style="color:var(--navy); font-weight:700; font-size:18px;">904-555-1234</a>
             </p>
-            <p style="margin-top:16px; font-size:12px; color:#888;">
-              <strong>Developer note:</strong> Once Jobber is set up, delete this div
-              and uncomment the iframe below.
-            </p>
-            <code>
-              src="https://clienthub.getjobber.com/client_hubs/YOUR-ID/public/work_request/embedded_new_request"
-            </code>
           </div>
-          <!-- ══ END JOBBER PLACEHOLDER ══════════════════════════════════ -->
 
-
-          <!-- ══ JOBBER EMBED IFRAME ══════════════════════════════════════
-               This is the actual Jobber booking form.
-               CURRENTLY COMMENTED OUT — uncomment once you have your Jobber URL.
-
-               TO ACTIVATE:
-               1. Delete the .jobber-placeholder div above
-               2. Remove the HTML comment markers around this iframe block
-               3. Replace PASTE-YOUR-JOBBER-URL-HERE with your actual URL
-               4. Save and re-upload
-
-               ════════════════════════════════════════════════════════════
+          <!-- Jobber embed iframe — uncomment once Jobber is live
           <div class="jobber-embed-wrapper">
             <iframe
               src="PASTE-YOUR-JOBBER-URL-HERE"
@@ -185,28 +60,17 @@
               title="Book a dryer vent cleaning appointment">
             </iframe>
           </div>
-               ════════════════════════════════════════════════════════════ -->
+          -->
+
+        </div>
 
 
-        </div><!-- end left column -->
-
-
-        <!-- ╔══════════════════════════════════════════════════════════════
-             ║  RIGHT COLUMN — DIRECT CONTACT INFO SIDEBAR
-             ║  Phone, email, hours, quick call-out box
-             ║
-             ║  TO CHANGE:
-             ║  - Phone: update display and tel: href
-             ║  - Email: update the mailto: href and display text
-             ║  - Hours: edit the <p> inside the hours .contact-info-item
-             ║  - Service area: edit the <p> inside the location item
-             ╚══════════════════════════════════════════════════════════════ -->
+        <!-- RIGHT COLUMN — DIRECT CONTACT INFO -->
         <div>
-          <h2 style="font-family:'Barlow Condensed',sans-serif; font-size:28px; font-weight:900; margin-bottom:20px;">
+          <h2 style="font-family:'Montserrat',sans-serif; font-size:28px; font-weight:800; margin-bottom:20px;">
             Or reach us directly
           </h2>
 
-          <!-- Phone -->
           <div class="contact-info-item">
             <div class="contact-icon">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -215,12 +79,10 @@
             </div>
             <div>
               <h4>Phone</h4>
-              <!-- TO CHANGE: update display text AND tel: number (no dashes) -->
-              <p><a href="tel:9045551234" style="color:var(--teal);">904-555-1234</a></p>
+              <p><a href="tel:9045551234" style="color:var(--navy); font-weight:700;">904-555-1234</a></p>
             </div>
           </div>
 
-          <!-- Email -->
           <div class="contact-info-item">
             <div class="contact-icon">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -230,12 +92,10 @@
             </div>
             <div>
               <h4>Email</h4>
-              <!-- TO CHANGE: update mailto: and display text -->
-              <p><a href="mailto:dan@jaxdryerventcleaners.com" style="color:var(--teal);">dan@jaxdryerventcleaners.com</a></p>
+              <p><a href="mailto:dan@jaxdryerventcleaners.com" style="color:var(--navy); font-weight:700;">dan@jaxdryerventcleaners.com</a></p>
             </div>
           </div>
 
-          <!-- Service area -->
           <div class="contact-info-item">
             <div class="contact-icon">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -249,7 +109,6 @@
             </div>
           </div>
 
-          <!-- Business hours -->
           <div class="contact-info-item">
             <div class="contact-icon">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -259,27 +118,25 @@
             </div>
             <div>
               <h4>Hours</h4>
-              <!-- TO CHANGE: update your actual business hours here -->
               <p>Monday–Saturday, 7am–6pm</p>
             </div>
           </div>
 
-          <!-- "Fastest way to book" dark call-out box -->
-          <div style="background:var(--teal-dark); border-radius:10px; padding:24px; margin-top:8px;">
-            <div style="font-family:'Barlow Condensed',sans-serif; font-size:20px; font-weight:900; color:var(--white); margin-bottom:8px;">
+          <!-- Call-out box -->
+          <div style="background:var(--navy); border-radius:10px; padding:24px; margin-top:8px;">
+            <div style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:800; color:var(--white); margin-bottom:8px;">
               Fastest way to book?
             </div>
-            <p style="color:var(--teal-soft); font-size:14px; margin-bottom:16px;">
+            <p style="color:var(--navy-soft); font-size:14px; margin-bottom:16px;">
               Call us. Most appointments are confirmed in under 3 minutes over the phone, and we can often get you in same day.
             </p>
-            <!-- Large gold phone number in the call-out box -->
-            <a href="tel:9045551234" style="font-family:'Barlow Condensed',sans-serif; font-size:28px; font-weight:900; color:var(--gold); display:block;">
+            <a href="tel:9045551234" style="font-family:'Montserrat',sans-serif; font-size:28px; font-weight:800; color:var(--white); display:block;">
               904-555-1234
             </a>
           </div>
 
-          <!-- Commercial / property manager note -->
-          <div style="margin-top:20px; padding:16px; border:0.5px solid #ddd; border-radius:8px;">
+          <!-- Commercial note -->
+          <div style="margin-top:20px; padding:16px; border:1px solid #ddd; border-radius:8px;">
             <div style="font-size:13px; font-weight:700; color:var(--text); margin-bottom:6px;">
               Property managers &amp; HOAs
             </div>
@@ -289,27 +146,16 @@
             </p>
           </div>
 
-        </div><!-- end right column -->
+        </div>
 
-      </div><!-- end .contact-grid -->
+      </div>
     </div>
   </section>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 4 — FAQ
-       Frequently asked questions. Excellent for SEO — Google often
-       pulls FAQ content into "People also ask" rich results.
-
-       SEO TIP: Write questions exactly as people search them.
-       e.g. "how often should I clean my dryer vent" not "cleaning frequency"
-
-       TO ADD A QUESTION: copy a .faq-item div and update content
-       TO REMOVE A QUESTION: delete a .faq-item div
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- FAQ -->
   <section class="section section-gray">
     <div class="container">
-
       <div class="section-header">
         <div class="section-label">Common questions</div>
         <h2>Before you call — quick answers.</h2>
@@ -317,51 +163,42 @@
 
       <div style="display:flex; flex-direction:column; gap:16px; max-width:700px;">
 
-        <!-- FAQ Item 1 -->
         <div style="background:white; border-radius:8px; padding:20px; border:0.5px solid #ddd;">
           <div style="font-weight:700; margin-bottom:6px; font-size:15px;">How long does a dryer vent cleaning take?</div>
           <p style="font-size:14px; color:var(--text-muted); line-height:1.6;">Most residential jobs take 45–75 minutes from arrival to departure. Repairs may take longer — we'll let you know upfront.</p>
         </div>
 
-        <!-- FAQ Item 2 -->
         <div style="background:white; border-radius:8px; padding:20px; border:0.5px solid #ddd;">
           <div style="font-weight:700; margin-bottom:6px; font-size:15px;">How often should I clean my dryer vent?</div>
           <p style="font-size:14px; color:var(--text-muted); line-height:1.6;">At least once per year for most homes. Jacksonville's high humidity means lint compacts faster — homes with long vent runs or heavy dryer use benefit from twice-yearly service.</p>
         </div>
 
-        <!-- FAQ Item 3 -->
         <div style="background:white; border-radius:8px; padding:20px; border:0.5px solid #ddd;">
           <div style="font-weight:700; margin-bottom:6px; font-size:15px;">Do I need to be home during the cleaning?</div>
           <p style="font-size:14px; color:var(--text-muted); line-height:1.6;">Yes — we need access to your laundry room and often to the exterior vent termination. We'll communicate your arrival window ahead of time, show up when we say we will, and text you when we're on the way.</p>
         </div>
 
-        <!-- FAQ Item 4 -->
         <div style="background:white; border-radius:8px; padding:20px; border:0.5px solid #ddd;">
           <div style="font-weight:700; margin-bottom:6px; font-size:15px;">What payment methods do you accept?</div>
           <p style="font-size:14px; color:var(--text-muted); line-height:1.6;">Credit card, debit card, check, Venmo, and Zelle. Digital invoice sent immediately after the job is complete.</p>
         </div>
 
-        <!-- FAQ Item 5 -->
         <div style="background:white; border-radius:8px; padding:20px; border:0.5px solid #ddd;">
           <div style="font-weight:700; margin-bottom:6px; font-size:15px;">Do you service condos and apartment buildings?</div>
           <p style="font-size:14px; color:var(--text-muted); line-height:1.6;">Yes — including buildings with booster fans and longer shared vent runs. We work with property managers and HOA boards on recurring service contracts throughout Jacksonville.</p>
         </div>
 
-        <!-- FAQ Item 6 -->
         <div style="background:white; border-radius:8px; padding:20px; border:0.5px solid #ddd;">
           <div style="font-weight:700; margin-bottom:6px; font-size:15px;">What signs mean my dryer vent needs cleaning?</div>
           <p style="font-size:14px; color:var(--text-muted); line-height:1.6;">Clothes taking more than one cycle to dry, the dryer running hot to the touch, a burning smell during operation, or it's been more than a year since your last cleaning.</p>
         </div>
 
-      </div><!-- end FAQ list -->
+      </div>
     </div>
   </section>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 5 — CTA BAND
-       Final conversion opportunity before the footer.
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- CTA BAND -->
   <section class="cta-band">
     <div class="container">
       <div class="section-label section-label-light">Ready to schedule?</div>
@@ -376,12 +213,8 @@
   </section>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 6 — FOOTER
-       Injected by components.js — do not edit footer here.
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- FOOTER — injected by components.js -->
   <div id="footer-placeholder"></div>
-
   <script src="components.js"></script>
 
 </body>

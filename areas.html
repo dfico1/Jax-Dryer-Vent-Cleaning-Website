@@ -1,64 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--
-  ============================================================================
-  JAX DRYER VENT CLEANERS — SERVICE AREAS PAGE
-  File: areas.html
-
-  WHY THIS PAGE MATTERS FOR SEO:
-  This is one of the most important pages for local search ranking.
-  Every neighborhood mentioned here (by name) helps you rank when someone
-  searches "dryer vent cleaning [neighborhood name]".
-  The more specific and detailed this page is, the better.
-
-  PAGE SECTIONS (in order):
-  1.  <head>          SEO meta tags (neighbor-rich description)
-  2.  Nav             Injected by components.js
-  3.  Page hero       Teal header
-  4.  Primary areas   6 detailed cards for core service zones
-  5.  Extended areas  Pill grid for secondary neighborhoods
-  6.  Why Jax needs   3-card section: humidity, long runs, rooftops
-  7.  CTA band        Dark section with phone number
-  8.  Footer          Injected by components.js
-
-  QUICK CHANGE GUIDE:
-  ─────────────────────────────────────────────────────────────
-  Add a primary area    → copy a .service-card div in PRIMARY AREAS section
-  Add an extended area  → copy an .area-pill div in EXTENDED AREAS section
-  Remove an area        → delete the corresponding card or pill
-  Update area copy      → edit the <p> text inside each .service-card
-  ─────────────────────────────────────────────────────────────
-  ============================================================================
--->
+<!-- JAX DRYER VENT CLEANERS — SERVICE AREAS PAGE (areas.html)
+     Every neighborhood name on this page helps rank for "[neighborhood] dryer vent cleaning" searches. -->
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO: Title — includes multiple location keywords -->
   <title>Dryer Vent Cleaning Service Areas | Jacksonville, Ponte Vedra, St. Augustine FL</title>
-
-  <!-- SEO: Description — pack in as many area names as naturally fit -->
   <meta name="description" content="Serving Northeast Florida from the GA border to Gainesville, Lake City, and Palm Coast. We cover Riverside, San Marco, Orange Park, Middleburg, and Palatka.">
-
-  <!-- SEO: Canonical URL — update to your real domain before launch -->
   <link rel="canonical" href="https://www.jaxdryerventcleaning.com/areas.html">
-
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 1 — NAVIGATION (injected by components.js)
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- NAV — injected by components.js -->
   <div id="nav-placeholder"></div>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 2 — PAGE HERO
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
       <div class="section-label section-label-light">Service areas</div>
@@ -68,23 +29,9 @@
   </section>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 3 — PRIMARY SERVICE ZONES
-       Detailed cards for the 6 core neighborhoods.
-       Each card has a neighborhood name as H3 (good for SEO),
-       descriptive local copy, and a "from $150" price signal.
-
-       SEO NOTE: The H3 text and the paragraph copy for each card
-       should mention the neighborhood name naturally — this is how
-       Google understands which searches to show this page for.
-
-       TO ADD A PRIMARY AREA CARD:
-       Copy one of the .service-card divs below, update the h3 and p text,
-       and update the .service-price div.
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- PRIMARY SERVICE ZONES -->
   <section class="section">
     <div class="container">
-
       <div class="section-header">
         <div class="section-label">Primary service zones</div>
         <h2>Our core service area — same-day available.</h2>
@@ -93,64 +40,49 @@
 
       <div class="service-grid">
 
-        <!-- Primary Area 1: Ponte Vedra -->
         <div class="service-card">
           <h3>Ponte Vedra &amp; Ponte Vedra Beach</h3>
           <p>Newer construction, longer vent runs. One of our busiest service zones. We know these neighborhoods well.</p>
         </div>
 
-        <!-- Primary Area 2: Beach communities -->
         <div class="service-card">
           <h3>Jacksonville Beach, Neptune Beach &amp; Atlantic Beach</h3>
-          <p> Saltwater humidity and beach towels accelerate lint compaction. Many beach homes benefit from twice-yearly cleaning.</p>
+          <p>Saltwater humidity and beach towels accelerate lint compaction. Many beach homes benefit from twice-yearly cleaning.</p>
         </div>
 
-        <!-- Primary Area 3: Southside -->
         <div class="service-card">
           <h3>Southside &amp; Tinseltown</h3>
           <p>Large suburban area with many townhome and condo complexes. We work closely with property managers throughout the Southside corridor.</p>
         </div>
 
-        <!-- Primary Area 4: Mandarin -->
         <div class="service-card">
           <h3>Mandarin</h3>
           <p>Established family neighborhoods with a mix of older and newer construction. We have the expertise to ensure all vent types are handled properly.</p>
         </div>
 
-        <!-- Primary Area 5: Nocatee / St. Johns -->
         <div class="service-card">
           <h3>Nocatee &amp; St. Johns County</h3>
           <p>One of the fastest-growing communities in the US. New construction means longer vent runs that need professional attention.</p>
         </div>
 
-        <!-- Primary Area 6: St. Augustine -->
         <div class="service-card">
           <h3>St. Augustine &amp; St. Johns</h3>
           <p>We regularly serve St. Augustine, St. Augustine Beach, and surrounding St. Johns County communities. Same great service, same high standard.</p>
         </div>
 
-      </div><!-- end primary .service-grid -->
+      </div>
     </div>
   </section>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 4 — EXTENDED COVERAGE AREAS
-       Secondary neighborhoods covered, shown as pills.
-       Less detailed than the primary cards but still gets indexed by Google.
-
-       TO ADD AN AREA: copy an .area-pill div and update the neighborhood name
-       TO REMOVE AN AREA: delete an .area-pill div
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- EXTENDED COVERAGE -->
   <section class="section section-gray">
     <div class="container">
-
       <div class="section-header">
         <div class="section-label">Extended coverage</div>
         <h2>We also serve these communities.</h2>
       </div>
 
-      <!-- Extended area pills — each neighborhood name helps local SEO -->
       <div class="areas-grid">
         <div class="area-pill">Fernandina Beach</div>
         <div class="area-pill">Amelia Island</div>
@@ -170,23 +102,13 @@
         <div class="area-pill">Macclenny</div>
         <div class="area-pill">Palm Valley</div>
       </div>
-
     </div>
   </section>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 5 — WHY JACKSONVILLE SPECIFICALLY
-       3-card section explaining local climate and construction factors.
-       This content differentiates the site from generic national competitors
-       and signals local expertise to both users and Google.
-
-       TO ADD: copy a .service-card div
-       TO REMOVE: delete a .service-card div
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- WHY JACKSONVILLE SPECIFICALLY -->
   <section class="section">
     <div class="container">
-
       <div class="section-header">
         <div class="section-label">Jacksonville-specific knowledge</div>
         <h2>Why Jacksonville homes need extra attention.</h2>
@@ -194,26 +116,22 @@
 
       <div class="service-grid">
 
-        <!-- Local factor 1: Humidity -->
         <div class="service-card">
           <h3>High humidity accelerates lint buildup</h3>
           <p>Jacksonville's year-round humidity causes lint to compact more densely than in dry climates. What needs annual cleaning in other states may need twice-yearly service here in Florida.</p>
         </div>
 
-        <!-- Local factor 2: Newer construction -->
         <div class="service-card">
           <h3>Newer construction = longer vent runs</h3>
           <p>Jacksonville's new developments (Nocatee, Ponte Vedra, St. Johns) feature slab-on-grade construction with longer vent runs, often greater than 25 ft, requiring extended reach.</p>
         </div>
 
-      </div><!-- end .service-grid -->
+      </div>
     </div>
   </section>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 6 — CTA BAND
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- CTA BAND -->
   <section class="cta-band">
     <div class="container">
       <div class="section-label section-label-light">Your area</div>
@@ -228,9 +146,7 @@
   </section>
 
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       SECTION 7 — FOOTER (injected by components.js)
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- FOOTER — injected by components.js -->
   <div id="footer-placeholder"></div>
   <script src="components.js"></script>
 

@@ -1,23 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--
-  ============================================================================
-  JAX DRYER VENT CLEANERS — FAQ PAGE
-  File: faq.html
-
-  PAGE SECTIONS (in order):
-  1.  <head>        SEO meta tags
-  2.  Nav           Injected by components.js
-  3.  Page hero     Teal header
-  4.  FAQ           Collapsible question/answer sections
-  5.  CTA band      Dark section with phone number
-  6.  Footer        Injected by components.js
-
-  TO ADD A QUESTION: copy a .faq-item div and update the question + answer
-  TO REMOVE A QUESTION: delete a .faq-item div
-  ============================================================================
--->
+<!-- JAX DRYER VENT CLEANERS — FAQ PAGE (faq.html) -->
 
 <head>
   <meta charset="UTF-8">
@@ -27,7 +11,6 @@
   <link rel="canonical" href="https://www.jaxdryerventcleaning.com/faq.html">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* ── FAQ COLLAPSIBLE STYLES ── */
     .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
 
     .faq-item {
@@ -48,7 +31,7 @@
       gap: 16px;
       cursor: pointer;
       text-align: left;
-      font-family: 'Barlow', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 16px;
       font-weight: 700;
       color: var(--text);
@@ -56,14 +39,12 @@
     }
 
     .faq-question:hover { background: var(--gray); }
+    .faq-question.open  { background: var(--navy-light); color: var(--navy); }
 
-    .faq-question.open { background: var(--teal-light); color: var(--teal-dark); }
-
-    /* Plus/minus chevron */
     .faq-icon {
       font-size: 22px;
       font-weight: 300;
-      color: var(--teal);
+      color: var(--navy);
       flex-shrink: 0;
       line-height: 1;
       transition: transform 0.2s;
@@ -83,11 +64,11 @@
     .faq-answer.open { display: block; }
 
     .faq-category {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 3px;
-      color: var(--teal);
+      color: var(--navy);
       text-transform: uppercase;
       margin: 40px 0 16px;
       max-width: 760px;
@@ -101,25 +82,25 @@
 
 <body>
 
+  <!-- NAV — injected by components.js -->
   <div id="nav-placeholder"></div>
 
-  <!-- ── PAGE HERO ── -->
+
+  <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
       <div class="section-label section-label-light">Frequently asked questions</div>
       <h1>Everything you want to know about dryer vent cleaning.</h1>
-      <p>Can't find your answer? Call us at <a href="tel:9045551234" style="color:var(--gold); font-weight:700;">904-555-1234</a> — we're happy to help.</p>
+      <p>Can't find your answer? Call us at <a href="tel:9045551234" style="color:var(--white); font-weight:700;">904-555-1234</a> — we're happy to help.</p>
     </div>
   </section>
 
 
-  <!-- ── FAQ SECTION ── -->
+  <!-- FAQ SECTION -->
   <section class="section">
     <div class="container">
 
-      <!-- CATEGORY: Safety -->
       <div class="faq-category">Safety</div>
-
       <div class="faq-list">
 
         <div class="faq-item">
@@ -161,12 +142,10 @@
           </div>
         </div>
 
-      </div><!-- end safety faq-list -->
+      </div>
 
 
-      <!-- CATEGORY: Service -->
       <div class="faq-category">Service</div>
-
       <div class="faq-list">
 
         <div class="faq-item">
@@ -175,7 +154,7 @@
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>We provide quotes directly — call us at <a href="tel:9045551234" style="color:var(--teal); font-weight:600;">904-555-1234</a> or use the contact form and we'll get back to you quickly. Pricing depends on your specific vent configuration, and there are no hidden fees — the price you're quoted is the price you pay.</p>
+            <p>We provide quotes directly — call us at <a href="tel:9045551234" style="color:var(--navy); font-weight:700;">904-555-1234</a> or use the contact form and we'll get back to you quickly. Pricing depends on your specific vent configuration, and there are no hidden fees — the price you're quoted is the price you pay.</p>
           </div>
         </div>
 
@@ -195,7 +174,7 @@
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>Yes, same-day appointments are frequently available, especially on weekdays. Call us at <a href="tel:9045551234" style="color:var(--teal); font-weight:600;">904-555-1234</a> and we'll do our best to get you scheduled quickly. If you're seeing warning signs — burning smell, very long dry times — don't wait.</p>
+            <p>Yes, same-day appointments are frequently available, especially on weekdays. Call us at <a href="tel:9045551234" style="color:var(--navy); font-weight:700;">904-555-1234</a> and we'll do our best to get you scheduled quickly. If you're seeing warning signs — burning smell, very long dry times — don't wait.</p>
           </div>
         </div>
 
@@ -209,12 +188,10 @@
           </div>
         </div>
 
-      </div><!-- end service faq-list -->
+      </div>
 
 
-      <!-- CATEGORY: How Often -->
       <div class="faq-category">How Often</div>
-
       <div class="faq-list">
 
         <div class="faq-item">
@@ -223,7 +200,7 @@
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>The Chimney Safety Institute of America, considered the gold standard for drvery vent safety, recommendation is once per year for most households. With Northeast Florida's high-humidity climate, lint compacts more quickly than in drier regions. Many homes benefit from cleaning every 6 months. You may also need more frequent cleaning if you have a large family doing heavy laundry, pets that shed, or a dryer vent run longer than 25 feet.</p>
+            <p>The Chimney Safety Institute of America recommends once per year for most households. With Northeast Florida's high-humidity climate, lint compacts more quickly than in drier regions. Many homes benefit from cleaning every 6 months. You may also need more frequent cleaning if you have a large family doing heavy laundry, pets that shed, or a dryer vent run longer than 25 feet.</p>
           </div>
         </div>
 
@@ -237,12 +214,10 @@
           </div>
         </div>
 
-      </div><!-- end how often faq-list -->
+      </div>
 
 
-      <!-- CATEGORY: What to Expect -->
       <div class="faq-category">What to Expect</div>
-
       <div class="faq-list">
 
         <div class="faq-item">
@@ -283,13 +258,13 @@
           </div>
         </div>
 
-      </div><!-- end what to expect faq-list -->
+      </div>
 
     </div>
   </section>
 
 
-  <!-- ── CTA BAND ── -->
+  <!-- CTA BAND -->
   <section class="cta-band">
     <div class="container">
       <div class="section-label section-label-light">Ready to book?</div>
@@ -304,6 +279,7 @@
   </section>
 
 
+  <!-- FOOTER — injected by components.js -->
   <div id="footer-placeholder"></div>
   <script src="components.js"></script>
 
@@ -312,13 +288,11 @@
       const answer = btn.nextElementSibling;
       const isOpen = btn.classList.contains('open');
 
-      // Close all open items
       document.querySelectorAll('.faq-question.open').forEach(q => {
         q.classList.remove('open');
         q.nextElementSibling.classList.remove('open');
       });
 
-      // If it wasn't open, open it
       if (!isOpen) {
         btn.classList.add('open');
         answer.classList.add('open');

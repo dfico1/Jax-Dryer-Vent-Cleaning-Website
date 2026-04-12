@@ -1,82 +1,50 @@
 /* ==========================================================================
    JAX DRYER VENT CLEANERS — MAIN STYLESHEET
    File: style.css
-   
-   TABLE OF CONTENTS:
-   1.  FONTS & BRAND COLORS (CSS Variables)
-   2.  RESET & BASE STYLES
-   3.  NAVIGATION — desktop
-   4.  NAVIGATION — mobile hamburger
-   5.  BUTTONS
-   6.  SECTION LABELS (small uppercase eyebrow text)
-   7.  HERO — homepage full hero
-   8.  HERO TRUST BADGES
-   9.  STATS BAR
-   10. SECTION WRAPPERS
-   11. SERVICE CARDS
-   12. HOW IT WORKS STEPS
-   13. REVIEW CARDS
-   14. SERVICE AREA PILLS
-   15. CTA BAND (bottom of every page)
-   16. FOOTER
-   17. INNER PAGE HERO (non-homepage pages)
-   18. CONTACT PAGE — layout grid
-   19. CONTACT PAGE — form inputs
-   20. CONTACT PAGE — contact info sidebar
-   21. JOBBER EMBED SECTION ← READ THIS
-   22. PRICING CARDS (services page)
-   23. MOBILE RESPONSIVE OVERRIDES
+
+   COLOR PALETTE:
+   --navy       → primary dark navy — nav, footer, buttons, headings
+   --navy-dark  → deeper navy — footer background
+   --navy-light → very light navy tint — card backgrounds, area pills
+   --navy-soft  → muted blue-gray — text on dark backgrounds
+   --white      → white — card surfaces, text on dark
+   --black      → near-black — body text
+
+   FONTS:
+   Montserrat 700/800 → headings, large display text
+   Inter 400/700      → body text, nav links, buttons
    ========================================================================== */
 
 
 /* ==========================================================================
    1. FONTS & BRAND COLORS
-
-   BRAND COLORS — Logo-matched coastal palette:
-   --teal       → primary brand color (buttons, headings, accents) — cobalt blue
-   --teal-dark  → nav, footer, dark sections — deep navy
-   --gold       → accent color (phone numbers, CTA buttons) — burnt orange
-   --white      → card backgrounds, text on dark backgrounds
-
-   TO CHANGE A COLOR SITE-WIDE: edit the hex value here — it updates everywhere.
-   Example: to change main blue, edit "--teal: #1A6BB5;" below.
-
-   FONTS (loaded from Google Fonts — requires internet):
-   - Barlow Condensed 700/900 → headings, logo, large display text
-   - Barlow 400/600/700       → body text, nav links, buttons
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;900&family=Barlow+Condensed:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@700;800&display=swap');
 
 :root {
-  /* Primary brand colors */
-  --teal:       #007bff;   /* vibrant blue — buttons, links, icons */
-  --teal-dark:  #0056b3;   /* darker blue — nav, footer, dark sections */
-  --teal-mid:   #004085;   /* even darker blue — dividers inside dark sections */
-  --teal-light: #e0f0ff;   /* very light blue — card backgrounds, area pills */
-  --teal-soft:  #a0c0e0;   /* soft blue — muted text on dark backgrounds */
-
-  /* Accent color */
-  --gold:       #ffc107;   /* vibrant yellow-orange — phone numbers, CTA buttons, highlights */
-  --gold-dark:  #cc9a00;   /* darker yellow-orange — text ON orange buttons */
+  /* Navy palette */
+  --navy:       #0D2358;   /* primary navy — nav, footer, dark buttons */
+  --navy-dark:  #081840;   /* deeper navy — footer background */
+  --navy-mid:   #1A3570;   /* medium navy — dividers on dark sections */
+  --navy-light: #e8edf5;   /* very light navy tint — pills, icon boxes */
+  --navy-soft:  #8A9BBD;   /* muted — secondary text on dark backgrounds */
 
   /* Neutrals */
-  --black:      #1a1a1a;   /* near-black — primary body text */
-  --gray:       #f8f9fa;   /* light gray — alternating section backgrounds */
-  --text:       #1a1a1a;   /* body text color */
-  --text-muted: #555555;   /* secondary/muted text */
   --white:      #ffffff;
+  --black:      #1a1a1a;   /* near-black — primary body text */
+  --gray:       #f5f5f5;   /* light gray — alternating section backgrounds */
+  --text:       #1a1a1a;
+  --text-muted: #555555;
 
   /* Layout */
-  --max:    1100px;        /* max content width — increase to widen the site */
-  --radius: 8px;           /* default border radius for cards, buttons, inputs */
+  --max:    1100px;
+  --radius: 8px;
 }
 
 
 /* ==========================================================================
    2. RESET & BASE STYLES
-   Removes browser defaults and sets global font/color.
-   DO NOT change unless you know what you are doing.
    ========================================================================== */
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -84,7 +52,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   line-height: 1.7;
   color: var(--text);
@@ -94,7 +62,6 @@ body {
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 
-/* Centered content wrapper — used inside every section */
 .container {
   max-width: var(--max);
   margin: 0 auto;
@@ -104,20 +71,14 @@ img { max-width: 100%; display: block; }
 
 /* ==========================================================================
    3. NAVIGATION — DESKTOP
-   Sticky nav bar that stays at top while scrolling.
-   Left: logo | Right: nav links, phone number, "Book now" button
-
-   TO CHANGE NAV HEIGHT:       edit height in .nav-inner
-   TO CHANGE NAV BACKGROUND:   edit background in nav {}
-   TO ADD A NAV LINK:          edit components.js — the navHTML string
    ========================================================================== */
 
 nav {
-  background: var(--teal-dark);
+  background: var(--navy);
   padding: 0 24px;
   position: sticky;
   top: 0;
-  z-index: 100; /* sits above all page content while scrolling */
+  z-index: 100;
 }
 
 .nav-inner {
@@ -126,61 +87,39 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px; /* ← change nav height here */
+  height: 64px;
 }
 
-/* Logo group — left side */
 .nav-logo { display: flex; align-items: center; gap: 10px; }
-.nav-logo-text { display: flex; flex-direction: column; }
 
-/* "JAX DRYER VENT CLEANERS" in teal */
-.nav-logo-name {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 18px;
-  font-weight: 900;
-  color: var(--teal);
-  letter-spacing: 1px;
-  line-height: 1;
-}
-
-/* "COMMERCIAL & RESIDENTIAL" sub-line under logo */
-.nav-logo-sub {
-  font-size: 9px;
-  color: var(--teal-soft);
-  letter-spacing: 2px;
-  line-height: 1;
-  margin-top: 2px;
-}
-
-/* Nav links list — right side */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px; /* spacing between nav items */
+  gap: 28px;
   list-style: none;
 }
 
 .nav-links a {
-  color: var(--teal-soft);
+  color: var(--navy-soft);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.5px;
   transition: color 0.2s;
 }
 
 .nav-links a:hover { color: var(--white); }
 
-/* Gold phone number displayed in nav */
+/* White phone number in nav */
 .nav-phone {
-  color: var(--gold) !important;
+  color: var(--white) !important;
   font-size: 15px !important;
   font-weight: 700 !important;
 }
 
-/* "Book now" gold pill button in nav */
+/* "Book now" white pill button in nav */
 .nav-cta {
-  background: var(--gold);
-  color: var(--teal-dark) !important;
+  background: var(--white);
+  color: var(--navy) !important;
   padding: 8px 18px;
   border-radius: var(--radius);
   font-weight: 700 !important;
@@ -188,13 +127,11 @@ nav {
 
 
 /* ==========================================================================
-   4. NAVIGATION — MOBILE HAMBURGER (hover dropdown)
-   Hidden on desktop, shown on mobile (breakpoint in section 23).
-   Hovering the hamburger reveals the dropdown — no click needed.
+   4. NAVIGATION — MOBILE HAMBURGER
    ========================================================================== */
 
 .nav-hamburger-wrap {
-  display: none; /* shown only on mobile via media query */
+  display: none;
   position: relative;
 }
 
@@ -206,24 +143,22 @@ nav {
   padding: 4px;
 }
 
-/* Three horizontal bars of the hamburger icon */
 .nav-hamburger span {
   display: block;
   width: 22px;
   height: 2px;
-  background: var(--teal-soft);
+  background: var(--navy-soft);
   border-radius: 2px;
 }
 
-/* Dropdown panel — hidden by default, shown on hover */
 .mobile-nav-dropdown {
   display: none;
   position: absolute;
   top: 100%;
   right: 0;
-  background: #0D2358;
+  background: var(--navy);
   padding: 16px 24px;
-  border-top: 1px solid #0A1C47;
+  border-top: 1px solid var(--navy-mid);
   border-radius: 0 0 8px 8px;
   min-width: 220px;
   z-index: 200;
@@ -232,7 +167,6 @@ nav {
 
 .nav-hamburger-wrap:hover .mobile-nav-dropdown { display: block; }
 
-/* Keep dropdown visible when moving mouse from hamburger into it */
 .mobile-nav-dropdown ul {
   list-style: none;
   display: flex;
@@ -243,21 +177,19 @@ nav {
 
 /* ==========================================================================
    5. BUTTONS
-   Four styles used throughout the site:
 
-   .btn-gold    → gold background, dark text  — primary CTA ("Call now")
-   .btn-white   → white background, dark text — secondary on dark sections
-   .btn-outline → transparent, white border   — secondary on teal/dark sections
-   .btn-teal    → teal background, white text — secondary on white sections
-
-   USAGE: <a href="tel:9045551234" class="btn btn-gold">Call now</a>
+   .btn-navy    → navy background, white text — primary CTA on light sections
+   .btn-gold    → white background, navy text — primary CTA on dark sections
+   .btn-white   → white background, navy text — same as btn-gold
+   .btn-outline → transparent, white border   — secondary on dark sections
+   .btn-teal    → navy background, white text — same as btn-navy
    ========================================================================== */
 
 .btn {
   display: inline-block;
   padding: 13px 28px;
   border-radius: var(--radius);
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
   font-weight: 700;
   cursor: pointer;
@@ -265,46 +197,41 @@ nav {
   border: none;
 }
 
-.btn:hover  { opacity: 0.9; }
+.btn:hover  { opacity: 0.88; }
 .btn:active { transform: scale(0.98); }
 
-.btn-gold    { background: var(--gold);   color: var(--teal-dark); }
-.btn-white   { background: var(--white);  color: var(--teal-dark); }
+/* Primary on dark sections — white button, navy text */
+.btn-gold    { background: var(--white);  color: var(--navy); }
+.btn-white   { background: var(--white);  color: var(--navy); }
+
+/* Secondary on dark sections */
 .btn-outline { background: transparent;   color: var(--white); border: 2px solid var(--white); }
-.btn-teal    { background: var(--teal);   color: var(--white); }
+
+/* Primary on light sections — navy button, white text */
+.btn-teal    { background: var(--navy);   color: var(--white); }
+.btn-navy    { background: var(--navy);   color: var(--white); }
 
 
 /* ==========================================================================
    6. SECTION LABELS
    Small ALL-CAPS eyebrow text above section headings.
-   Example: "WHAT WE DO" sits above "Not a side service. It's all we do."
-
-   .section-label       → teal  — use on white or gray sections
-   .section-label-light → soft teal — use on dark or teal sections
    ========================================================================== */
 
 .section-label {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 3px;
-  color: var(--teal);
+  color: var(--navy);
   text-transform: uppercase;
   margin-bottom: 8px;
 }
 
-.section-label-light { color: var(--teal-soft); }
-.hero .section-label-light { color: var(--white); }
-.hero .btn-gold { background: var(--white); color: var(--teal-dark); }
+.section-label-light { color: var(--navy-soft); }
+.hero .section-label-light { color: rgba(255,255,255,0.75); }
 
 
 /* ==========================================================================
    7. HERO — HOMEPAGE
-   Large teal header section on index.html only.
-   Contains: eyebrow label | H1 headline | subheading | CTA buttons | trust badges
-
-   TO CHANGE HERO BACKGROUND: edit background in .hero {}
-   TO CHANGE H1 SIZE: edit font-size in .hero h1 — uses clamp() for responsive sizing
-   The <span> inside H1 renders gold — used to highlight "Jacksonville, FL"
    ========================================================================== */
 
 .hero {
@@ -313,84 +240,72 @@ nav {
 }
 
 .hero-inner {
-  max-width: 620px;
+  max-width: 740px;
   margin: 0;
-  background: rgba(10, 28, 71, 0.82);
-  padding: 40px 44px;
+  background: rgba(8, 24, 64, 0.85);
+  padding: 36px 40px;
   border-radius: 12px;
   backdrop-filter: blur(4px);
 }
 
 .hero h1 {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(36px, 5vw, 58px); /* responsive: min 36px → scales → max 58px */
-  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 800;
   color: var(--white);
   line-height: 1.1;
   max-width: 720px;
   margin-bottom: 16px;
 }
 
-/* Gold highlighted text inside H1 e.g. "Jacksonville, FL" */
-.hero h1 span { color: var(--gold); }
+/* No special color on span — keep headline uniform */
+.hero h1 span { color: var(--white); }
 
 .hero-sub {
-  font-size: 17px;
-  color: var(--teal-light);
-  max-width: 580px;
+  font-size: 16px;
+  color: rgba(255,255,255,0.82);
+  max-width: 560px;
   margin-bottom: 28px;
   line-height: 1.6;
 }
 
-/* Wraps the two CTA buttons (Call + Book online) */
 .hero-buttons {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 
 /* ==========================================================================
    8. HERO TRUST BADGES
-   Small gold-dot + text items below the hero CTA buttons.
-   Example: "● Same-day available"
-
-   TO ADD A BADGE: copy a .trust-item div in index.html hero section
    ========================================================================== */
 
-.hero-trust { display: flex; gap: 20px; flex-wrap: wrap; }
+.hero-trust { display: flex; gap: 14px; flex-wrap: nowrap; }
 
 .trust-item {
   display: flex;
   align-items: center;
   gap: 6px;
   font-size: 13px;
-  color: var(--teal-light);
+  color: rgba(255,255,255,0.8);
 }
 
-/* Gold dot before each trust item text */
 .trust-dot {
-  width: 7px;
-  height: 7px;
-  background: var(--gold);
+  width: 6px;
+  height: 6px;
+  background: var(--white);
   border-radius: 50%;
-  flex-shrink: 0; /* prevents squishing */
+  flex-shrink: 0;
 }
 
 
 /* ==========================================================================
    9. STATS BAR
-   Dark band directly below the hero showing key business numbers.
-   Example: "$149 STARTING PRICE | 5.0★ GOOGLE RATING | Same day AVAILABLE"
-
-   TO UPDATE NUMBERS: edit the .stat-num text in index.html stats-bar section
-   TO ADD A STAT: copy a .stat div in index.html
-   TO REMOVE A STAT: delete a .stat div — remaining stats space automatically
    ========================================================================== */
 
 .stats-bar {
-  background: var(--teal-dark);
+  background: var(--navy);
   padding: 20px 24px;
 }
 
@@ -405,24 +320,22 @@ nav {
 .stat {
   text-align: center;
   padding: 8px 32px;
-  border-right: 0.5px solid var(--teal-mid); /* divider between stats */
+  border-right: 0.5px solid var(--navy-mid);
 }
 
-.stat:last-child { border-right: none; } /* no divider after last stat */
+.stat:last-child { border-right: none; }
 
-/* Large number/value e.g. "$149" or "5.0★" */
 .stat-num {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 26px;
-  font-weight: 900;
-  color: var(--gold);
+  font-weight: 800;
+  color: var(--white);
   line-height: 1;
 }
 
-/* Small label below number e.g. "STARTING PRICE" */
 .stat-label {
   font-size: 9px;
-  color: var(--teal-soft);
+  color: var(--navy-soft);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-top: 3px;
@@ -431,31 +344,22 @@ nav {
 
 /* ==========================================================================
    10. SECTION WRAPPERS
-   Base styles for all content sections. Three background variants:
-
-   .section      → white background (default)
-   .section-gray → off-white/gray (use to alternate section backgrounds)
-   .section-dark → dark teal (used sparingly — CTA sections)
-
-   TO CHANGE SECTION PADDING: edit padding in .section {}
    ========================================================================== */
 
 .section      { padding: 72px 24px; }
 .section-gray { background: var(--gray); }
-.section-dark { background: var(--teal-dark); }
+.section-dark { background: var(--navy); }
 
-/* Section header group: label + h2 + optional intro paragraph */
 .section-header { margin-bottom: 40px; }
 
 .section-header h2 {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(28px, 4vw, 40px);
-  font-weight: 900;
+  font-weight: 800;
   color: var(--text);
   line-height: 1.15;
 }
 
-/* On dark sections, heading flips to white automatically */
 .section-dark .section-header h2 { color: var(--white); }
 
 .section-header p {
@@ -465,17 +369,11 @@ nav {
   margin-top: 10px;
 }
 
-/* On dark sections, paragraph flips to soft teal automatically */
-.section-dark .section-header p { color: var(--teal-soft); }
+.section-dark .section-header p { color: var(--navy-soft); }
 
 
 /* ==========================================================================
    11. SERVICE CARDS
-   Responsive card grid used on index.html and services.html.
-   Auto-fits to 1, 2, or 3 columns based on available width.
-
-   TO ADD A CARD: copy a .service-card div in the HTML
-   TO CHANGE COLUMN COUNT: edit minmax(260px, 1fr) — lower = more columns
    ========================================================================== */
 
 .service-grid {
@@ -493,19 +391,18 @@ nav {
 
 .service-card {
   background: var(--white);
-  border: 0.5px solid #ddd;
+  border: 1px solid #ddd;
   border-radius: 10px;
   padding: 28px;
   transition: border-color 0.2s;
 }
 
-.service-card:hover { border-color: var(--teal); } /* teal border on hover */
+.service-card:hover { border-color: var(--navy); }
 
-/* Square teal icon container at top of card */
 .service-icon {
   width: 44px;
   height: 44px;
-  background: var(--teal-light);
+  background: var(--navy-light);
   border-radius: var(--radius);
   display: flex;
   align-items: center;
@@ -514,7 +411,7 @@ nav {
 }
 
 .service-card h3 {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-weight: 700;
   color: var(--text);
@@ -523,34 +420,28 @@ nav {
 
 .service-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
 
-/* Teal price shown at bottom of card e.g. "From $149" */
-.service-price { margin-top: 14px; font-size: 15px; font-weight: 700; color: var(--teal); }
+.service-price { margin-top: 14px; font-size: 15px; font-weight: 700; color: var(--navy); }
 
 
 /* ==========================================================================
    12. HOW IT WORKS — NUMBERED STEPS
-   Vertical list with teal numbered circles. Used on index.html.
-
-   TO ADD A STEP: copy a .step div in the HTML, update the number
-   TO CHANGE STEP NUMBER COLOR: edit background in .step-num {}
    ========================================================================== */
 
 .steps { display: flex; flex-direction: column; gap: 24px; max-width: 640px; }
 .step  { display: flex; gap: 18px; align-items: flex-start; }
 
-/* Teal circle with the step number */
 .step-num {
   min-width: 36px;
   height: 36px;
-  background: var(--teal);
+  background: var(--navy);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 15px;
   color: var(--white);
-  flex-shrink: 0; /* prevents circle from being squished by long text */
+  flex-shrink: 0;
 }
 
 .step h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
@@ -559,11 +450,6 @@ nav {
 
 /* ==========================================================================
    13. REVIEW CARDS
-   Five gold stars + italic quote + reviewer name/location. Used on index.html.
-
-   TO ADD A REVIEW: copy a .review-card div in index.html
-   IMPORTANT: Replace placeholder reviews with real customer quotes ASAP.
-   Real reviews with real neighborhood names (e.g. "Ponte Vedra Beach") help SEO.
    ========================================================================== */
 
 .reviews-grid {
@@ -574,32 +460,26 @@ nav {
 
 .review-card {
   background: var(--white);
-  border: 0.5px solid #ddd;
+  border: 1px solid #ddd;
   border-radius: 10px;
   padding: 22px;
 }
 
-/* Row of 5 gold stars */
 .stars { display: flex; gap: 3px; margin-bottom: 10px; }
 
-/* Individual star shape via CSS clip-path polygon */
 .star {
   width: 14px;
   height: 14px;
-  background: var(--gold);
+  background: var(--navy);
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
 
 .review-text  { font-size: 14px; color: var(--text); line-height: 1.6; margin-bottom: 12px; font-style: italic; }
-.reviewer     { font-size: 12px; color: var(--text-muted); font-weight: 600; }
+.reviewer     { font-size: 12px; color: var(--text-muted); font-weight: 700; }
 
 
 /* ==========================================================================
    14. SERVICE AREA PILLS
-   Teal-tinted badge showing each service neighborhood.
-   Used on index.html (preview) and areas.html (full list).
-
-   TO ADD AN AREA: copy a .area-pill div and update the neighborhood name
    ========================================================================== */
 
 .areas-grid {
@@ -609,64 +489,53 @@ nav {
 }
 
 .area-pill {
-  background: var(--teal-light);
-  color: var(--teal-dark);
+  background: var(--navy-light);
+  color: var(--navy);
   padding: 10px 16px;
   border-radius: var(--radius);
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
 }
 
 
 /* ==========================================================================
    15. CTA BAND
-   Dark call-to-action section at the bottom of every page.
-   Contains: eyebrow label | heading | subtitle | large phone number | buttons
-
-   TO UPDATE PHONE NUMBER SITE-WIDE:
-   1. Find all instances of "904-555-1234" across all HTML files
-   2. Replace with your real number (formatted with dashes for display)
-   3. Also update href="tel:9045551234" (no dashes) on all <a> tags
    ========================================================================== */
 
 .cta-band {
-  background: var(--teal-dark);
+  background: var(--navy);
   padding: 64px 24px;
   text-align: center;
 }
 
 .cta-band h2 {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(28px, 4vw, 44px);
-  font-weight: 900;
+  font-weight: 800;
   color: var(--white);
   margin-bottom: 8px;
 }
 
-/* Large gold phone number — most prominent element in the CTA */
+/* Large white phone number */
 .cta-phone {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(36px, 6vw, 58px);
-  font-weight: 900;
-  color: var(--gold);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(36px, 6vw, 56px);
+  font-weight: 800;
+  color: var(--white);
   margin: 16px 0;
   display: block;
 }
 
-.cta-band p { color: var(--teal-soft); font-size: 15px; margin-bottom: 24px; }
+.cta-band p { color: var(--navy-soft); font-size: 15px; margin-bottom: 24px; }
 
 
 /* ==========================================================================
    16. FOOTER
-   Site-wide footer with logo, nav links, phone, and copyright notice.
-   The footer HTML is rendered by components.js — edit that file to change content.
-
-   TO CHANGE COPYRIGHT YEAR: edit the footer template in components.js
    ========================================================================== */
 
 footer {
-  background: #0a2b20; /* slightly darker than --teal-dark for visual depth */
+  background: var(--navy-dark);
   padding: 32px 24px;
   text-align: center;
 }
@@ -674,48 +543,39 @@ footer {
 .footer-inner { max-width: var(--max); margin: 0 auto; }
 
 .footer-name {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
-  font-weight: 900;
-  color: var(--teal);
+  font-weight: 800;
+  color: var(--white);
   letter-spacing: 1px;
   margin-bottom: 6px;
 }
 
 .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 12px 0; }
-.footer-links a { color: var(--teal-soft); font-size: 13px; transition: color 0.2s; }
+.footer-links a { color: var(--navy-soft); font-size: 13px; transition: color 0.2s; }
 .footer-links a:hover { color: var(--white); }
-.footer-copy { font-size: 11px; color: var(--teal-mid); margin-top: 12px; }
+.footer-copy { font-size: 11px; color: var(--navy-soft); margin-top: 12px; }
 
 
 /* ==========================================================================
    17. INNER PAGE HERO
-   Smaller teal hero used at the top of all pages EXCEPT the homepage.
-   Used on: services.html, areas.html, about.html, contact.html
-
-   Contains: eyebrow label | H1 | optional subtitle paragraph
    ========================================================================== */
 
-.page-hero { background: var(--teal); padding: 52px 24px; }
+.page-hero { background: var(--navy); padding: 52px 24px; }
 
 .page-hero h1 {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(32px, 5vw, 50px);
-  font-weight: 900;
+  font-weight: 800;
   color: var(--white);
   line-height: 1.1;
 }
 
-.page-hero p { color: var(--teal-light); font-size: 16px; margin-top: 10px; max-width: 560px; }
+.page-hero p { color: rgba(255,255,255,0.75); font-size: 16px; margin-top: 10px; max-width: 560px; }
 
 
 /* ==========================================================================
    18. CONTACT PAGE — LAYOUT GRID
-   Two-column layout on contact.html:
-   Left column  → Jobber embed form (or fallback form before Jobber is set up)
-   Right column → direct contact info (phone, email, hours, address)
-
-   Stacks to single column on mobile — see breakpoint in section 23.
    ========================================================================== */
 
 .contact-grid {
@@ -728,8 +588,6 @@ footer {
 
 /* ==========================================================================
    19. CONTACT PAGE — FORM INPUTS
-   Styles for both the Jobber embed wrapper and the fallback contact form.
-   These styles still apply to surrounding elements even after Jobber is live.
    ========================================================================== */
 
 .form-group { margin-bottom: 18px; }
@@ -737,7 +595,7 @@ footer {
 .form-group label {
   display: block;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text);
   margin-bottom: 6px;
   letter-spacing: 0.3px;
@@ -750,7 +608,7 @@ footer {
   padding: 11px 14px;
   border: 1px solid #ddd;
   border-radius: var(--radius);
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
   color: var(--text);
   background: var(--white);
@@ -758,26 +616,23 @@ footer {
   outline: none;
 }
 
-/* Teal border highlight when field is focused */
 .form-group input:focus,
 .form-group select:focus,
-.form-group textarea:focus { border-color: var(--teal); }
+.form-group textarea:focus { border-color: var(--navy); }
 
 .form-group textarea { min-height: 120px; resize: vertical; }
 
 
 /* ==========================================================================
    20. CONTACT PAGE — CONTACT INFO SIDEBAR
-   Right column on contact.html: phone, email, hours, location info items.
    ========================================================================== */
 
 .contact-info-item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 24px; }
 
-/* Square teal icon container */
 .contact-icon {
   width: 40px;
   height: 40px;
-  background: var(--teal-light);
+  background: var(--navy-light);
   border-radius: var(--radius);
   display: flex;
   align-items: center;
@@ -785,9 +640,8 @@ footer {
   flex-shrink: 0;
 }
 
-/* Label e.g. "PHONE" or "HOURS" */
 .contact-info-item h4 {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   color: var(--text-muted);
   letter-spacing: 0.5px;
@@ -795,66 +649,21 @@ footer {
   text-transform: uppercase;
 }
 
-/* Value e.g. "904-555-1234" */
-.contact-info-item p { font-size: 15px; font-weight: 600; color: var(--text); }
+.contact-info-item p { font-size: 15px; font-weight: 700; color: var(--text); }
 
 
 /* ==========================================================================
    21. JOBBER EMBED SECTION
-
-   *** READ THIS CAREFULLY BEFORE GOING LIVE ***
-
-   The left column of contact.html shows either:
-   A) A placeholder notice (while you set up Jobber)
-   B) The live Jobber booking form iframe (once Jobber is configured)
-
-   HOW TO ACTIVATE JOBBER BOOKING EMBED:
-   ─────────────────────────────────────
-   Step 1: Sign up at getjobber.com → Core plan or higher
-   Step 2: In Jobber → Settings → Requests and Bookings
-   Step 3: Create your request form, add your services (e.g. "Standard Cleaning $149")
-   Step 4: Click "Share" on your form → click "Embed" → copy the iframe code
-   Step 5: Open contact.html in a text editor
-   Step 6: Find the comment that says "JOBBER EMBED — REPLACE SRC BELOW"
-   Step 7: Replace the placeholder src URL with your actual Jobber embed URL
-   Step 8: Delete the entire .jobber-placeholder div (the yellow warning box)
-   Step 9: Save the file and re-upload to GitHub
-
-   YOUR JOBBER EMBED URL WILL LOOK LIKE:
-   https://clienthub.getjobber.com/client_hubs/YOUR-UNIQUE-ID/public/work_request/embedded_new_request
-
-   ALSO DO THESE — HIGH VALUE, FREE:
-   ──────────────────────────────────
-   • Google Business Profile booking link:
-     Jobber → Settings → Requests and Bookings → Share → "Direct link"
-     Add this URL to your Google Business Profile as the booking button.
-     This lets people book directly from Google Maps — huge for conversions.
-
-   • QR code for business cards and door hangers:
-     Take the Jobber direct link URL to qr-code-generator.com
-     Download the QR code image and add it to the back of your business cards.
-     Customers scan it and go straight to your booking form.
-
-   • Facebook booking button:
-     Jobber provides a Facebook-specific tracking link.
-     Go to Settings → Requests and Bookings → Share → Facebook icon
-     Add this as your Facebook Page's booking button for automatic lead tracking.
-
-   • Automated review requests:
-     After every job in Jobber, enable automatic review request texts/emails.
-     This is how you build Google reviews fast without manually asking every time.
    ========================================================================== */
 
-/* Outer wrapper around the Jobber iframe */
 .jobber-embed-wrapper {
   width: 100%;
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid #ddd;
-  min-height: 500px; /* prevents layout collapse while iframe loads */
+  min-height: 500px;
 }
 
-/* The Jobber iframe itself */
 .jobber-embed-wrapper iframe {
   width: 100%;
   min-height: 600px;
@@ -862,35 +671,31 @@ footer {
   display: block;
 }
 
-/* ── Placeholder box shown BEFORE Jobber is configured ──
-   Delete this entire .jobber-placeholder block from contact.html
-   once your Jobber iframe is live. */
 .jobber-placeholder {
-  background: #fffbea;
-  border: 2px dashed var(--gold);
+  background: var(--navy-light);
+  border: 2px dashed var(--navy-soft);
   border-radius: var(--radius);
   padding: 32px;
   text-align: center;
 }
 
 .jobber-placeholder h3 {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 22px;
-  font-weight: 900;
-  color: var(--teal-dark);
+  font-weight: 800;
+  color: var(--navy);
   margin-bottom: 8px;
 }
 
 .jobber-placeholder p { font-size: 14px; color: var(--text-muted); margin-bottom: 6px; line-height: 1.6; }
 
-/* Code snippet styling inside the placeholder */
 .jobber-placeholder code {
   display: block;
-  background: #f0f0f0;
+  background: #e0e6ef;
   padding: 10px 14px;
   border-radius: 4px;
   font-size: 12px;
-  color: var(--teal-dark);
+  color: var(--navy);
   margin-top: 12px;
   text-align: left;
   word-break: break-all;
@@ -899,11 +704,6 @@ footer {
 
 /* ==========================================================================
    22. PRICING CARDS
-   Three-column grid with colored header + itemized feature/price list.
-   Used on: services.html
-
-   TO CHANGE A CARD'S HEADER COLOR: add inline style="background:#0D3D30"
-   to the .pricing-card-header div (see Annual Plan card for example)
    ========================================================================== */
 
 .pricing-grid {
@@ -912,35 +712,30 @@ footer {
   gap: 20px;
 }
 
-.pricing-card { border: 0.5px solid #ddd; border-radius: 10px; overflow: hidden; }
+.pricing-card { border: 1px solid #ddd; border-radius: 10px; overflow: hidden; }
 
-/* Dark navy top section */
-.pricing-card-header { background: #0A1C47; padding: 20px 24px; }
+.pricing-card-header { background: var(--navy); padding: 20px 24px; }
 
 .pricing-card-header h3 {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 22px;
-  font-weight: 900;
+  font-weight: 800;
   color: var(--white);
 }
 
-/* Large gold price e.g. "$149" */
 .pricing-card-header .price {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 36px;
-  font-weight: 900;
-  color: var(--gold);
+  font-weight: 800;
+  color: var(--white);
   line-height: 1;
   margin-top: 4px;
 }
 
-/* Small note below price e.g. "Up to 25 ft runs" */
-.pricing-card-header .price-note { font-size: 12px; color: var(--teal-light); margin-top: 2px; }
+.pricing-card-header .price-note { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 2px; }
 
-/* White body with the feature list */
 .pricing-card-body { background: var(--white); padding: 20px 24px; }
 
-/* Individual feature row */
 .pricing-item {
   display: flex;
   justify-content: space-between;
@@ -952,30 +747,24 @@ footer {
 
 .pricing-item:last-child  { border-bottom: none; }
 .pricing-item-name        { color: var(--text); }
-.pricing-item-price       { font-weight: 700; color: var(--teal); }
+.pricing-item-price       { font-weight: 700; color: var(--navy); }
 
 
 /* ==========================================================================
    23. MOBILE RESPONSIVE OVERRIDES
-   Rules that activate on smaller screens (tablets and phones).
-   These OVERRIDE the desktop styles defined above.
-   DO NOT put new desktop styles in this section.
-
-   768px breakpoint → hides nav links, shows hamburger, reduces padding
-   700px breakpoint → stacks contact grid to single column
    ========================================================================== */
 
-/* Tablets and phones (768px and below) */
 @media (max-width: 768px) {
-  .nav-links           { display: none; } /* hide desktop nav links */
-  .nav-hamburger-wrap  { display: flex; } /* show hamburger icon instead */
-  .stat            { padding: 8px 16px; } /* tighten stats so all 4 fit in a row */
-  .section         { padding: 48px 20px; } /* reduce section vertical padding */
+  .nav-links           { display: none; }
+  .nav-hamburger-wrap  { display: flex; }
+  .stat            { padding: 8px 16px; }
+  .section         { padding: 48px 20px; }
   .hero            { padding: 48px 20px 44px; }
-  .service-grid-2col { grid-template-columns: 1fr; } /* stack to 1 col on mobile */
+  .service-grid-2col { grid-template-columns: 1fr; }
+  .hero-trust      { flex-wrap: wrap; gap: 10px; }
 }
 
-/* Phones only (700px and below) */
 @media (max-width: 700px) {
-  .contact-grid { grid-template-columns: 1fr; } /* stack contact page to single column */
+  .contact-grid { grid-template-columns: 1fr; }
+  .hero-inner   { padding: 28px 24px; }
 }
