@@ -1,7 +1,7 @@
-/* JAX DRYER VENT CLEANERS — components.js
+/* JAX DRYER VENT CLEANING — components.js
    Injects the shared nav and footer into every page.
    Edit this file to update nav links, phone number, or footer content site-wide.
-   To update phone: change "904-555-1234" and href="tel:9045551234" (no dashes) */
+   To update phone: change "904-867-0816" and href="tel:9048670816" (no dashes) */
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
             &#128205;&nbsp; Serving Jacksonville &amp; Northeast Florida
           </span>
         </div>
-        <a href="tel:9045551234" style="color:#ffffff; font-weight:700; text-decoration:none;">
-          Call Now: 904-555-1234
+        <a href="tel:9048670816" style="color:#ffffff; font-weight:700; text-decoration:none;">
+          Call Now: 904-867-0816
         </a>
       </div>
     </div>
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="nav-inner">
 
         <a href="index.html" class="nav-logo">
-          <img src="Images/logo v3.png" alt="Jax Dryer Vent Cleaners logo" style="height:64px; width:auto; display:block;" />
+          <img src="Images/logo v3.png" alt="Jax Dryer Vent Cleaning logo" style="height:64px; width:auto; display:block;" />
         </a>
 
         <!-- Desktop nav links -->
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
               <li><a href="faq.html"      style="color:#A8C4E8; font-size:15px; font-weight:600;">FAQ</a></li>
               <li><a href="about.html"    style="color:#A8C4E8; font-size:15px; font-weight:600;">About</a></li>
               <li><a href="contact.html"  style="color:#A8C4E8; font-size:15px; font-weight:600;">Contact</a></li>
-              <li><a href="tel:9045551234" style="color:#ffffff; font-size:20px; font-weight:700;">904-555-1234</a></li>
+              <li><a href="tel:9048670816" style="color:#ffffff; font-size:20px; font-weight:700;">904-867-0816</a></li>
               <li>
                 <a href="contact.html" style="display:inline-block; background:#ffffff; color:#0D2358; padding:10px 20px; border-radius:6px; font-weight:700; font-size:14px;">
                   Book now
@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
     </nav>
     
     <!-- Sticky Mobile Call Button -->
-    <a href="tel:9045551234" class="mobile-sticky-cta">
-      <span>Call for Same-Day Service: 904-555-1234</span>
+    <a href="tel:9048670816" class="mobile-sticky-cta">
+      <span>Call for Same-Day Service: 904-867-0816</span>
     </a>
     `;
 
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const footerHTML = `
     <footer>
       <div class="footer-inner">
-        <div class="footer-name">JAX DRYER VENT CLEANERS</div>
+        <div class="footer-name">JAX DRYER VENT CLEANING</div>
         <div style="font-size:12px; color:#A8C4E8; margin-bottom:8px;">
           Jacksonville's dedicated dryer vent specialist &middot; Commercial &amp; Residential
         </div>
@@ -101,11 +101,11 @@ document.addEventListener('DOMContentLoaded', function () {
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
         </div>
-        <a href="tel:9045551234" style="color:#ffffff; font-size:16px; font-weight:700; display:block; margin: 8px 0;">
-          904-555-1234
+        <a href="tel:9048670816" style="color:#ffffff; font-size:16px; font-weight:700; display:block; margin: 8px 0;">
+          904-867-0816
         </a>
         <div class="footer-copy">
-          &copy; ${new Date().getFullYear()} Jax Dryer Vent Cleaners LLC
+          &copy; ${new Date().getFullYear()} Jax Dryer Vent Cleaning LLC
           &middot; Jacksonville, FL
           &middot; Licensed &amp; Insured
           &middot; <a href="index.html" style="color:inherit;">jaxdryerventcleaning.com</a>

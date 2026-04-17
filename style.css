@@ -1,5 +1,5 @@
 /* ==========================================================================
-   JAX DRYER VENT CLEANERS — MAIN STYLESHEET
+   JAX DRYER VENT CLEANING — MAIN STYLESHEET
    File: style.css
 
    COLOR PALETTE:
@@ -640,7 +640,56 @@ footer {
 
 
 /* ==========================================================================
-   20. CONTACT PAGE — CONTACT INFO SIDEBAR
+   20. CONTACT ACTION BUTTONS
+   Large click-to-call and click-to-email buttons on the contact page.
+   ========================================================================== */
+
+.contact-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 24px;
+  border-radius: var(--radius);
+  background: var(--navy);
+  color: var(--white);
+  text-decoration: none;
+  margin-bottom: 16px;
+  transition: opacity 0.2s;
+}
+
+.contact-action-btn:hover { opacity: 0.88; }
+
+.contact-action-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-action-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--navy-soft);
+  margin-bottom: 4px;
+}
+
+.contact-action-value {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.1;
+}
+
+
+/* ==========================================================================
+   21. CONTACT PAGE — CONTACT INFO SIDEBAR
    ========================================================================== */
 
 .contact-info-item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 24px; }
