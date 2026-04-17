@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="nav-inner">
 
         <a href="index.html" class="nav-logo">
-          <img src="Images/logo v3.png" alt="Jax Dryer Vent Cleaning logo" style="height:64px; width:auto; display:block;" />
+          <img src="Images/logo_v3.png" alt="Jax Dryer Vent Cleaning logo" style="height:64px; width:auto; display:block;" />
         </a>
 
         <!-- Desktop nav links -->
